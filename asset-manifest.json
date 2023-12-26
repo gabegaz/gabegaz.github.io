@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.28ef49ae.css",
-    "main.js": "/static/js/main.55a6e6f2.js",
+    "main.js": "/static/js/main.a5e21fa5.js",
     "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Getachew_Ahmed_Abegaz.pdf": "/static/media/Getachew_Ahmed_Abegaz.72e9a6f06a1de1763153.pdf",
@@ -17,12 +17,12 @@
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
     "main.28ef49ae.css.map": "/static/css/main.28ef49ae.css.map",
-    "main.55a6e6f2.js.map": "/static/js/main.55a6e6f2.js.map",
+    "main.a5e21fa5.js.map": "/static/js/main.a5e21fa5.js.map",
     "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28ef49ae.css",
-    "static/js/main.55a6e6f2.js"
+    "static/js/main.a5e21fa5.js"
   ]
 }
