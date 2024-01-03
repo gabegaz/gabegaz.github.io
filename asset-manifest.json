@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.68248cd3.css",
-    "main.js": "/static/js/main.03d137b4.js",
-    "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/Getachew_Ahmed_Abegaz.pdf": "/static/media/Getachew_Ahmed_Abegaz.72e9a6f06a1de1763153.pdf",
-    "static/media/home-main.svg": "/static/media/home-main.541f8179af8209ce03ccf2178fe62dbf.svg",
-    "static/media/racingbarchart.jpg": "/static/media/racingbarchart.509a3b7f0c7d0cd997f3.jpg",
-    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
-    "static/media/myphoto.jpeg": "/static/media/myphoto.ef681e409551a1758d02.jpeg",
-    "static/media/data_strategy.png": "/static/media/data_strategy.d6699c184348be05685d.png",
-    "static/media/datavis.png": "/static/media/datavis.ae45278751941db1d3d4.png",
-    "static/media/sentiment.png": "/static/media/sentiment.4da4b8ff9765b7737658.png",
-    "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
+    "main.css": "/static/css/main.311707ce.chunk.css",
+    "main.js": "/static/js/main.70c35f23.chunk.js",
+    "main.js.map": "/static/js/main.70c35f23.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a204f845.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a204f845.js.map",
+    "static/css/2.61df4d96.chunk.css": "/static/css/2.61df4d96.chunk.css",
+    "static/js/2.c13d36be.chunk.js": "/static/js/2.c13d36be.chunk.js",
+    "static/js/2.c13d36be.chunk.js.map": "/static/js/2.c13d36be.chunk.js.map",
+    "static/js/3.10f065f9.chunk.js": "/static/js/3.10f065f9.chunk.js",
+    "static/js/3.10f065f9.chunk.js.map": "/static/js/3.10f065f9.chunk.js.map",
+    "static/js/4.b7edf9bb.chunk.js": "/static/js/4.b7edf9bb.chunk.js",
+    "static/js/4.b7edf9bb.chunk.js.map": "/static/js/4.b7edf9bb.chunk.js.map",
     "index.html": "/index.html",
-    "main.68248cd3.css.map": "/static/css/main.68248cd3.css.map",
-    "main.03d137b4.js.map": "/static/js/main.03d137b4.js.map",
-    "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.68248cd3.css",
-    "static/js/main.03d137b4.js"
-  ]
+    "precache-manifest.23fc21d9222a90824ba9e7ef4d12e8ec.js": "/precache-manifest.23fc21d9222a90824ba9e7ef4d12e8ec.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.61df4d96.chunk.css.map": "/static/css/2.61df4d96.chunk.css.map",
+    "static/css/main.311707ce.chunk.css.map": "/static/css/main.311707ce.chunk.css.map",
+    "static/media/Getachew_Ahmed_Abegaz.pdf": "/static/media/Getachew_Ahmed_Abegaz.901023f6.pdf",
+    "static/media/data_strategy.d6699c18.png": "/static/media/data_strategy.d6699c18.png",
+    "static/media/datavis.ae452787.png": "/static/media/datavis.ae452787.png",
+    "static/media/style.css": "/static/media/pre.cf8c6935.svg",
+    "static/media/home-main.svg": "/static/media/home-main.1aed08b3.svg",
+    "static/media/myphoto.ef681e40.jpeg": "/static/media/myphoto.ef681e40.jpeg",
+    "static/media/racingbarchart.509a3b7f.jpg": "/static/media/racingbarchart.509a3b7f.jpg",
+    "static/media/sentiment.4da4b8ff.png": "/static/media/sentiment.4da4b8ff.png"
+  }
 }
