@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.65fa4d9a.css",
-    "main.js": "/static/js/main.aa271af0.js",
+    "main.css": "/static/css/main.8e2490fc.css",
+    "main.js": "/static/js/main.fe975ef4.js",
     "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Getachew_Ahmed_Abegaz.pdf": "/static/media/Getachew_Ahmed_Abegaz.72e9a6f06a1de1763153.pdf",
@@ -14,13 +14,13 @@
     "static/media/sentiment.png": "/static/media/sentiment.4da4b8ff9765b7737658.png",
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
-    "main.65fa4d9a.css.map": "/static/css/main.65fa4d9a.css.map",
-    "main.aa271af0.js.map": "/static/js/main.aa271af0.js.map",
+    "main.8e2490fc.css.map": "/static/css/main.8e2490fc.css.map",
+    "main.fe975ef4.js.map": "/static/js/main.fe975ef4.js.map",
     "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65fa4d9a.css",
-    "static/js/main.aa271af0.js"
+    "static/css/main.8e2490fc.css",
+    "static/js/main.fe975ef4.js"
   ]
 }
