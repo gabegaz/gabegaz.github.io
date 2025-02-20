@@ -7,7 +7,7 @@ import skills from './skills/skills'; // Import your skills data
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-base-100 text-base-content p-8">
+    <div className="min-h-screen bg-base-100 text-base-content p-8 mt-20">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
         {/* Photo Placeholder */}
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Gentle Intro */}
-        <div className="flex-1">
+        <div className="flex-1 mt-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hi, I&apos;m <span className="">Getachew</span>
           </h1>
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <div key={index} className="card bg-base-200 shadow-lg">
-              <div className="card-body">
+              <div className="card-body bg-white">
                 <h3 className="card-title text-xl font-bold">{skill.title}</h3>
                 <p className="text-base">{skill.description}</p>
               </div>

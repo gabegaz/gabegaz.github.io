@@ -2,7 +2,7 @@ import projects from "./projects"; // Import projects list
 
 export default function Portfolio() {
   return (
-    <div className="py-10">
+    <div className="py-16 pt-22">
       <h1 className="text-3xl font-bold text-gray-900 mb-6">My Projects</h1>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (

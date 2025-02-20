@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Enables static export
+  // output: "export",
   basePath: "/gabegaz", // Replace with your GitHub repo name
   assetPrefix: "/gabegaz/", // Ensures assets load correctly
 };
