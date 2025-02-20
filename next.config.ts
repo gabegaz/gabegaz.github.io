@@ -1,8 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // output: "export",
-  basePath: "/gabegaz", // Replace with your GitHub repo name
-  assetPrefix: "/gabegaz/", // Ensures assets load correctly
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
 };
 
 export default nextConfig;
