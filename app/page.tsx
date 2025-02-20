@@ -24,10 +24,10 @@ export default function Home() {
         {/* Gentle Intro */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm <span className="">Getachew</span>
+            Hi, I&apos;m <span className="">Getachew</span>
           </h1>
           <p className="text-lg md:text-xl mb-4">
-            I'm a data analytics consultant passionate about transforming raw data into actionable insights. With expertise in data-driven decision-making, AI systems, and business strategy, I help organizations unlock the full potential of their data.
+            I&apos;m a data analytics consultant passionate about transforming raw data into actionable insights. With expertise in data-driven decision-making, AI systems, and business strategy, I help organizations unlock the full potential of their data.
           </p>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function Home() {
       <div className="text-primary-content p-8 rounded-lg mb-12">
         <h2 className="text-3xl font-bold mb-4">Open to Collaboration</h2>
         <p className="text-lg">
-          I'm open to collaborating with innovative teams, investors, and organizations to transform data into tangible business value. Let's build something amazing together!
+          I&apos;m open to collaborating with innovative teams, investors, and organizations to transform data into tangible business value. Let&apos;s build something amazing together!
         </p>
       </div>
 
