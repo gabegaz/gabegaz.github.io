@@ -51,7 +51,7 @@ export default function Home() {
       <div className="text-primary-content p-8 rounded-lg mb-12">
         <h2 className="text-3xl font-bold mb-4">Open to Collaboration</h2>
         <p className="text-lg">
-          I&apos;m open to collaborating with innovative teams, investors, and organizations to transform data into tangible business value. Let&apos;s build something amazing together!
+          I&apos;m open to collaborating with innovative teams, investors, and organizations to transform data into tangible business value.
         </p>
       </div>
 
