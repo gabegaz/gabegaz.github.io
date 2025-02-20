@@ -5,7 +5,7 @@ const projects = [
     },
     { 
         title: 'AI Agents with Large Language Models',
-        description: 'Design, develop, and deploy autonomous AI agents powered by large language models, enabling intelligent decision-making, task automation, and dynamic problem-solving across various business domains.',   
+        description: 'Design, develop, and deploy autonomous AI agents powered by LLMs, enabling intelligent decision-making, and task automation various business domains.',   
     },
 
     { 
