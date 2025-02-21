@@ -14,16 +14,6 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
         {/* Photo Placeholder */}
 
-        <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-base-100 flex items-center justify-center"> {/* Explicitly set to bumblebee's base-100 */}
-          <Image
-            src="/getachew.png"
-            alt="Getachew"
-            width={256}
-            height={256}
-            className="obobject-cover"
-          />
-        </div>
-
 
         {/* Gentle Intro */}
         <div className="flex-1 mt-8">
@@ -34,6 +24,19 @@ export default function Home() {
             I&apos;m a data analytics consultant passionate about transforming raw data into actionable insights. With expertise in data-driven decision-making, AI systems, and business strategy, I help organizations unlock the full potential of their data.
           </p>
         </div>
+
+
+        <div className="w-60 h-70 md:w-70 md:h-75 rounded-full overflow-hidden bg-base-100 flex items-center justify-center"> {/* Explicitly set to bumblebee's base-100 */}
+          <Image
+            src="/04.png"
+            alt="Getachew"
+            width={256}
+            height={256}
+            className="obobject-cover"
+          />
+        </div>
+
+
       </div>
 
 
