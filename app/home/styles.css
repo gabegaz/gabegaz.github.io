@@ -1,0 +1,8 @@
+
+/* was trying to change photo background color. Not successful.*/
+
+img {
+    mix-blend-mode: multiply; /* or try 'darken', 'difference', or 'color-burn' */
+    background-color: var(--b1); /* Use the DaisyUI theme background */
+  }
+  
