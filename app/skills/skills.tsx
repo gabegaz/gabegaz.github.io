@@ -4,8 +4,8 @@ const projects = [
         description: 'Automate extracting valuable insights from data through statistical & econometric analysis, and machine learning techniques to inform decision-making.',
     },
     { 
-        title: 'AI Agents with Large Language Models',
-        description: 'Design, develop, and deploy autonomous AI agents powered by LLMs, enabling intelligent decision-making, and task automation various business domains.',   
+        title: 'AI Agents with LLMs/MLLM',
+        description: 'Design, develop, and deploy autonomous AI agents powered by LLMs, enabling intelligent decision-making, and task automation in various business domains.',   
     },
 
     { 

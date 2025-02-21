@@ -5,7 +5,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   title: "Gabegaz",
-  description: "Data Analytics Consultant Portfolio",
+  description: "Getachew Abegaz-Data Analytics Consultant",
 };
 
 

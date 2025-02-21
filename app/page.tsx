@@ -65,7 +65,7 @@ export default function Home() {
         href="https://www.linkedin.com/in/gabegaz/"
         target="_blank"
         rel="noreferrer"
-        className="text-3xl hover:text-primary"
+        className="text-3xl text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
       >
         <FaLinkedinIn />
       </a>
@@ -73,7 +73,7 @@ export default function Home() {
     <li className="social-icons">
       <a
         href="mailto:getabegaz@gmail.com"
-        className="text-3xl hover:text-primary"
+        className="text-3xl text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
       >
         <AiOutlineMail />
       </a>
@@ -83,7 +83,7 @@ export default function Home() {
         href="https://wa.me/251911480370"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-3xl hover:text-primary"
+        className="text-3xl text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
       >
         <FaWhatsapp />
       </a>
