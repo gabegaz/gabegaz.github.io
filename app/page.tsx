@@ -17,7 +17,7 @@ export default function Home() {
 
         {/* Gentle Intro */}
         <div className="flex-1 mt-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-3xl font-normal mb-4">
             Hi, I&apos;m <span className="">Getachew</span>
           </h1>
           <p className="text-lg md:text-xl mb-4">
@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Skills Section */}
       <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">What I Do</h2>
+        {/* <h2 className="text-3xl font-normal mb-6">What I Do</h2> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <div key={index} className="card bg-base-200 shadow-lg">

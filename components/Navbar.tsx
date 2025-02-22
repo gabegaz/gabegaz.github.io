@@ -22,10 +22,10 @@ const Navbar = () => {
         <Link
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
-          onClick={closeMenu} // Close menu when logo is clicked
+          onClick={closeMenu}
         >
-          <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
-            Gabegaz
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Getachew Abegaz
           </span>
         </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href="/portfolio"
-                    className="block px-4 py-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
+                    className="block px-4 py-2 text-xl text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
                     onClick={closeMenu}
                   >
                     Projects
@@ -74,7 +74,7 @@ const Navbar = () => {
                     href="https://medium.com/@gabegaz"
                     target="_blank"
                     rel="noreferrer"
-                    className="block px-4 py-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
+                    className="block px-4 py-2 text-xl text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
                     onClick={closeMenu}
                   >
                     Blog
@@ -85,7 +85,7 @@ const Navbar = () => {
                     href="https://www.linkedin.com/in/gabegaz"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
+                    className="flex items-center gap-2 px-4 py-2 text-xl text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
                     onClick={closeMenu}
                   >
                     <FaLinkedin className="w-5 h-5" />
@@ -97,7 +97,7 @@ const Navbar = () => {
                     href="https://github.com/gabegaz"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
+                    className="flex items-center gap-2 px-4 py-2 text-xl text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700"
                     onClick={closeMenu}
                   >
                     <FaGithub className="w-5 h-5" />
@@ -115,7 +115,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/portfolio"
-                className="text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="text-xl text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
                 onClick={closeMenu}
               >
                 Projects
@@ -126,7 +126,7 @@ const Navbar = () => {
                 href="https://medium.com/@gabegaz"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="text-gray-900 text-xl hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
                 onClick={closeMenu}
               >
                 Blog
@@ -137,7 +137,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/gabegaz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="flex items-center gap-2 text-xl text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                 <FaLinkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
@@ -148,7 +148,7 @@ const Navbar = () => {
                 href="https://github.com/gabegaz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="flex items-center gap-2 text-xl text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                 <FaGithub className="w-5 h-5" />
                 <span>GitHub</span>
