@@ -3,7 +3,7 @@ import projects from "./projects"; // Import projects list
 export default function Portfolio() {
   return (
     <div className="py-16 pt-22">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">My Projects</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">Projects</h1>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="p-6 bg-white rounded-lg shadow-lg">
