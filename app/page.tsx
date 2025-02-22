@@ -14,7 +14,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
         {/* Photo Placeholder */}
         {/* Gentle Intro */}
-        <div className="flex-1 mt-8">
+        <div className="flex-1 mt-8 px-2">
           <h1 className="text-2xl md:text-3xl font-normal mb-4">
             Hi, I&apos;m <span className="">Getachew</span></h1>
           <p className="text-lg md:text-xl mb-4">
