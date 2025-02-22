@@ -8,7 +8,7 @@ import skills from './home/skills'; // Import your skills data
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-base-100 text-base-content p-8 mt-20">
+    <div className="min-h-screen bg-base-100 text-base-content xs:p-6 md:p-8 lg:p-8 mt-20">
       {/* Hero Section */}
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="text-2xl md:text-3xl font-normal mb-4">
             Hi, I&apos;m <span className="">Getachew</span></h1>
           <p className="text-lg md:text-xl mb-4">
-            I&apos;m a data science consultant helping organizations use data and AI to uncover insights, make smarter decisions, and drive growth. I specialize in turning complex data into actionable strategies through advanced analytics and automation.
+            I&apos;m a data science consultant helping organizationsuse data and AI to uncover insights, make smarter decisions, and drive growth. I specialize in turning complex data into actionable strategies through advanced analytics and automation.
           </p>
         </div>
 
