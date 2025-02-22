@@ -13,15 +13,12 @@ export default function Home() {
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
         {/* Photo Placeholder */}
-
-
         {/* Gentle Intro */}
         <div className="flex-1 mt-8">
-          <h1 className="text-3xl md:text-3xl font-normal mb-4">
-            Hi, I&apos;m <span className="">Getachew</span>
-          </h1>
+          <h1 className="text-2xl md:text-3xl font-normal mb-4">
+            Hi, I&apos;m <span className="">Getachew</span></h1>
           <p className="text-lg md:text-xl mb-4">
-            I&apos;m a data science consultant specializing in leveraging statistical and machine learning modeling, and AI-driven solutions to extract meaningful insights from complex data. With expertise in predictive analytics, data-driven decision-making, and business strategy, I help organizations harness the power of data to drive innovation and growth.
+            I&apos;m a data science consultant specializing in statistical and machine learning modeling, AI-driven solutions, and predictive analytics to extract insights and support data-driven decision-making for business growth.
           </p>
         </div>
 
@@ -35,8 +32,6 @@ export default function Home() {
             className="obobject-cover"
           />
         </div>
-
-
       </div>
 
 
@@ -98,8 +93,6 @@ export default function Home() {
           </li>
         </ul>
       </div>
-
-
     </div>
   );
 };

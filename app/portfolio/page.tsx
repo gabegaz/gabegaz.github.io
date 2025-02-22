@@ -7,7 +7,7 @@ export default function Portfolio() {
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="p-6 bg-white rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold">{project.title}</h2>
+            <h2 className="text-xl font-semibold text-blue-700">{project.title}</h2>
             <p className="text-gray-600 mb-4">{project.description}</p>
             <div className="flex space-x-4">
               {/* Always show the "Read More" button */}
@@ -15,7 +15,7 @@ export default function Portfolio() {
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="px-4 py-2 rounded-lg"
+                className="px-4 py-2 rounded-lg text-blue-700"
               >
                 Read More
               </a>
@@ -26,7 +26,7 @@ export default function Portfolio() {
                   href={project.code} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="px-4 py-2 rounded-lg"
+                  className="px-4 py-2 rounded-lg text-blue-700"
                 >
                   View Code
                 </a>
