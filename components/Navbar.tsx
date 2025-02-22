@@ -24,7 +24,7 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
           onClick={closeMenu} // Close menu when logo is clicked
         >
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
             Gabegaz
           </span>
         </Link>
