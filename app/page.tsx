@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="w-60 h-70 md:w-70 md:h-75 rounded-full overflow-hidden bg-base-100 flex items-center justify-center"> {/* Explicitly set to bumblebee's base-100 */}
           <Image
-            src="/04.png"
+            src="/04-removebg.png"
             alt="Getachew"
             width={256}
             height={256}
