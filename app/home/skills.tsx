@@ -1,24 +1,20 @@
 const projects = [
     { 
-        title: "Data-Driven Decision Making", 
-        description: 'Automate extracting valuable insights from data through statistical & econometric analysis, and machine learning techniques to inform decision-making.',
+        title: "Advanced Analytics & Predictive Modeling", 
+        description: "Develop and deploy statistical techniques and machine learning models to uncover patterns, forecast trends, and drive data-driven decision-making.",
     },
     { 
-        title: 'Autonomous AI Agents',
-        description: 'Design, develop, and deploy autonomous AI agents powered by LLMs, enabling intelligent decision-making, and task automation in various business domains.',   
+        title: "Autonomous AI Solutions",
+        description: "Design and implement AI-driven systems, leveraging LLMs for intelligent decision-making, automation, and optimization.",   
     },
-
     { 
-        title: 'Data & AI Business Strategy',
-        description: 'Provide strategic guidance on leveraging data & AI to achieve business objectives, identify opportunities, and assess potential impacts.',
+        title: "AI-Driven Business Strategy",
+        description: "Advise organizations on integrating AI and data science into their business strategy, identifying opportunities for innovation and competitive advantage.",
     },
-
     { 
-        title: 'Data and AI Based Business Models',
-        description: 'Create and refine business models centered around data and AI, identifying revenue opportunities, cost reductions, and new value propositions.',
+        title: "Data Science-Powered Business Models",
+        description: "Develop and optimize business models that leverage AI and data science, focusing on monetization strategies, efficiency gains, and scalable solutions.",
     },
-
-  ];
-
+];
 
 export default projects;

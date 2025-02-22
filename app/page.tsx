@@ -21,7 +21,7 @@ export default function Home() {
             Hi, I&apos;m <span className="">Getachew</span>
           </h1>
           <p className="text-lg md:text-xl mb-4">
-            I&apos;m a <span className="">data analytics consultant </span> passionate about transforming raw data into actionable insights. With expertise in data-driven decision-making, AI systems, and business strategy, I help organizations unlock the full potential of their data.
+            I&apos;m a data science consultant specializing in leveraging statistical and machine learning modeling, and AI-driven solutions to extract meaningful insights from complex data. With expertise in predictive analytics, data-driven decision-making, and business strategy, I help organizations harness the power of data to drive innovation and growth.
           </p>
         </div>
 
