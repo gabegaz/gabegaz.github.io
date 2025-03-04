@@ -42,7 +42,7 @@ export default function Home() {
           {skills.map((skill, index) => (
             <div key={index} className="card bg-base-200 shadow-lg">
               <div className="card-body bg-white">
-                <h3 className="card-title text-xl font-bold text-blue-400">{skill.title}</h3>
+                <h3 className="card-title text-xl font-bold text-blue-800">{skill.title}</h3>
                 <p className="text-base">{skill.description}</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Collaboration Callout */}
       <div className="text-primary-content p-8 rounded-lg mb-12">
-        <h2 className="text-3xl font-normal mb-4 text-blue-500">Open to Collaboration</h2>
+        <h2 className="text-3xl font-normal mb-4 text-blue-800">Open to Collaboration</h2>
         <p className="text-lg">
           I&apos;m open to collaborating with innovative teams, investors, and organizations to transform data into tangible business value.
         </p>
