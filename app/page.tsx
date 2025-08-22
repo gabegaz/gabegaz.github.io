@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="text-2xl md:text-3xl font-normal mb-4">
             Hi, I&apos;m <span className="">Getachew</span></h1>
           <p className="text-lg md:text-xl mb-4">
-            I&apos;m a data science consultant helping organizations use data and AI to uncover insights, make smarter decisions, automate tasks and drive growth. I specialize in turning complex data into actionable strategies through advanced analytics and automation.
+            I&apos;m a data science/research analysis consultant helping organizations use data and AI to uncover insights, make smarter decisions, automate tasks and drive growth. I specialize in turning complex data into actionable strategies through advanced analytics and automation.
           </p>
         </div>
 
