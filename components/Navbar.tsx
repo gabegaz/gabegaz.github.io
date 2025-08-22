@@ -25,7 +25,7 @@ const Navbar = () => {
           onClick={closeMenu}
         >
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Getachew Abegaz
+            GABEGAZ
           </span>
         </Link>
 
