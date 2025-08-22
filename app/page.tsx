@@ -8,7 +8,7 @@ import skills from './home/skills'; // Import your skills data
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-base-100 text-base-content xs:p-6 md:p-8 lg:p-8 mt-20">
+    <div className="min-h-screen bg-base-100 text-base-content xs:p-6 md:p-6 lg:p-68 mt-20">
       {/* Hero Section */}
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
