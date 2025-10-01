@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // This is the line you need to add 👇
+  // ⚙️ Tell Next.js to export a static site
+  output: 'export',
+
+  // ❓ Set the base path to your repo name
+  // This is needed because your site will be hosted at https://<username>.github.io/<repo-name>/
+  basePath: '/gabegaz.github.io',
+
+  // 🖼️ Disable image optimization, as it requires a server
   images: {
     unoptimized: true,
   },
-  
-  // This line was already in your config
-  output: 'export', 
 };
 
 module.exports = nextConfig;
