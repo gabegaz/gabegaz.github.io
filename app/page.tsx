@@ -17,8 +17,7 @@ export default function Home() {
             Hi, I&apos;m <span className="">Getachew</span>
           </h1>
           <p className="text-lg md:text-xl mb-4">
-            A consultant specializing in macroeconomic policy, financial markets, and technology, with a focus on emerging and frontier markets. I help organizations, investors, and policymakers translate complex data into actionable insights for strategic decision-making.
-          </p>
+I specialize in guiding organizations, investors, and policymakers through the complexities of emerging and frontier markets. By synthesizing analysis across macroeconomic policy, financial markets, and technology, I transform complex data into a strategic roadmap for confident decision-making.          </p>
         </div>
 
         <div className="w-60 h-70 md:w-70 md:h-75 rounded-full overflow-hidden bg-base-100 flex items-center justify-center">
@@ -35,7 +34,7 @@ export default function Home() {
       {/* Expertise Section (Formerly Skills) */}
       <div className="mb-12">
         <h2 className="text-3xl font-normal mb-6 text-center md:text-left">My Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {expertise.map((item, index) => (
             <div key={index} className="card bg-base-200 shadow-lg">
               <div className="card-body bg-white">

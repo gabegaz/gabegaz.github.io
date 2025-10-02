@@ -7,6 +7,9 @@ const nextConfig = {
   // This is needed because your site will be hosted at https://<username>.github.io/<repo-name>/
   basePath: '/gabegaz.github.io',
 
+
+
+  
   // 🖼️ Disable image optimization, as it requires a server
   images: {
     unoptimized: true,
