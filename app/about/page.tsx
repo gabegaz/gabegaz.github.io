@@ -43,7 +43,7 @@ export default function AboutPage() {
                 Synthesizing <span className="text-primary">Data</span> & <span className="text-accent">Economics</span>.
               </h1>
               <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                I am Getachew Abegaz, a data strategist specializing in the intersection of Computer Science and Economic Analysis. With 20+ years of experience, I guide organizations, investors, and policymakers through the complexities of emerging markets.
+                I am Getachew Ahmed Abegaz, a data strategist specializing in the intersection of Computer Science and Economic Analysis. With 20+ years of experience, I guide organizations, investors, and policymakers through the complexities of emerging markets.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
                 <div className="flex items-start space-x-3 text-left">
