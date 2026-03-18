@@ -18,11 +18,48 @@ export default function ContactPage() {
     inquiry: "Strategic Consulting",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real scenario, this would send to a backend or service
-    alert(`Thank you for your inquiry, ${formData.name}. I will review your request shortly.`);
+    setIsSubmitting(true);
+    setError(null);
+    setSubmitted(false);
+    
+    try {
+      // NOTE: Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
+      // You can get one for free at https://formspree.io/
+      const response = await fetch("https://formspree.io/f/mwvralwb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          organization: "",
+          inquiry: "Strategic Consulting",
+          message: ""
+        });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        const data = await response.json();
+        setError(data.error || "There was an issue submitting your inquiry. Please try again.");
+      }
+    } catch (err) {
+      setError("Unable to connect to the submission service. Please check your connection.");
+      console.error("Form submission error:", err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -169,12 +206,33 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
+                {submitted && (
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-green-500 font-bold text-sm text-center"
+                  >
+                    Message sent successfully! I will get back to you soon.
+                  </motion.p>
+                )}
+
+                {error && (
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-500 font-bold text-sm text-center"
+                  >
+                    {error}
+                  </motion.p>
+                )}
+
                 <button 
                   type="submit" 
-                  className="w-full py-3 md:py-4 bg-primary text-primary-foreground font-bold rounded-lg md:rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center space-x-2 group text-sm md:text-base"
+                  disabled={isSubmitting}
+                  className="w-full py-3 md:py-4 bg-primary text-primary-foreground font-bold rounded-lg md:rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center space-x-2 group text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span>Submit Inquiry</span>
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>
+                  {!isSubmitting && <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />}
                 </button>
               </form>
             </motion.div>
