@@ -26,70 +26,70 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 pb-24">
-      <div className="container mx-auto px-6">
+    <div className="pt-16 md:pt-24 pb-16 md:pb-24">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-20"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight">
               Initiate a <span className="text-primary">Strategic</span> Consultation.
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Let&apos;s discuss how we can operationalize your data and scale your business architecture.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-5 gap-16">
-            <div className="lg:col-span-2 space-y-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-16">
+            <div className="lg:col-span-2 space-y-10 md:space-y-12">
               <motion.div {...fadeInUp}>
-                <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Direct Channels</h3>
-                <div className="space-y-6">
+                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-6">Direct Channels</h3>
+                <div className="space-y-4 md:space-y-6">
                   <a href="mailto:getabegaz@gmail.com" className="flex items-center space-x-4 group">
-                    <div className="p-4 bg-card border border-muted/10 rounded-2xl group-hover:border-primary/50 transition-colors">
-                      <Mail size={24} className="text-primary" />
+                    <div className="p-3 md:p-4 bg-card border border-muted/10 rounded-xl md:rounded-2xl group-hover:border-primary/50 transition-colors">
+                      <Mail size={20} className="text-primary md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground font-mono">Email</p>
-                      <p className="font-bold">getabegaz@gmail.com</p>
+                      <p className="text-[10px] text-muted-foreground font-mono">Email</p>
+                      <p className="font-bold text-sm md:text-base text-balance break-all">getabegaz@gmail.com</p>
                     </div>
                   </a>
                   <a href="https://wa.me/251911480370" target="_blank" className="flex items-center space-x-4 group">
-                    <div className="p-4 bg-card border border-muted/10 rounded-2xl group-hover:border-primary/50 transition-colors">
-                      <MessageSquare size={24} className="text-primary" />
+                    <div className="p-3 md:p-4 bg-card border border-muted/10 rounded-xl md:rounded-2xl group-hover:border-primary/50 transition-colors">
+                      <MessageSquare size={20} className="text-primary md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground font-mono">WhatsApp</p>
-                      <p className="font-bold">+251 911 480 370</p>
+                      <p className="text-[10px] text-muted-foreground font-mono">WhatsApp</p>
+                      <p className="font-bold text-sm md:text-base">+251 911 480 370</p>
                     </div>
                   </a>
                   <a href="https://www.linkedin.com/in/gabegaz/" target="_blank" className="flex items-center space-x-4 group">
-                    <div className="p-4 bg-card border border-muted/10 rounded-2xl group-hover:border-primary/50 transition-colors">
-                      <Linkedin size={24} className="text-primary" />
+                    <div className="p-3 md:p-4 bg-card border border-muted/10 rounded-xl md:rounded-2xl group-hover:border-primary/50 transition-colors">
+                      <Linkedin size={20} className="text-primary md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground font-mono">LinkedIn</p>
-                      <p className="font-bold">in/gabegaz</p>
+                      <p className="text-[10px] text-muted-foreground font-mono">LinkedIn</p>
+                      <p className="font-bold text-sm md:text-base">in/gabegaz</p>
                     </div>
                   </a>
                 </div>
               </motion.div>
 
               <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
-                <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Engagement Scope</h3>
+                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-6">Engagement Scope</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <Clock size={18} className="text-muted-foreground mt-1" />
+                    <Clock size={18} className="text-muted-foreground mt-1 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">Standard response time: 24-48 hours.</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <MapPin size={18} className="text-muted-foreground mt-1" />
+                    <MapPin size={18} className="text-muted-foreground mt-1 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">Global availability. Base of operations: Ethiopia.</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <Globe size={18} className="text-muted-foreground mt-1" />
+                    <Globe size={18} className="text-muted-foreground mt-1 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">Specialized in Ethiopian and Emerging Markets.</p>
                   </div>
                 </div>
@@ -99,28 +99,28 @@ export default function ContactPage() {
             <motion.div 
               {...fadeInUp}
               transition={{ delay: 0.2 }}
-              className="lg:col-span-3 bg-card border border-muted/10 rounded-[2.5rem] p-8 md:p-12 shadow-sm"
+              className="lg:col-span-3 bg-card border border-muted/10 rounded-3xl md:rounded-[2.5rem] p-6 sm:p-8 md:p-12 shadow-sm"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Full Name</label>
+                    <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Full Name</label>
                     <input 
                       type="text" 
                       required
                       placeholder="Jane Doe"
-                      className="w-full bg-background border border-muted/20 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                      className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Email Address</label>
+                    <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Email Address</label>
                     <input 
                       type="email" 
                       required
                       placeholder="jane@organization.com"
-                      className="w-full bg-background border border-muted/20 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                      className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                     />
@@ -128,37 +128,42 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Organization</label>
+                  <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Organization</label>
                   <input 
                     type="text" 
                     placeholder="Institutional or Corporate Entity"
-                    className="w-full bg-background border border-muted/20 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
                     value={formData.organization}
                     onChange={(e) => setFormData({...formData, organization: e.target.value})}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Nature of Inquiry</label>
-                  <select 
-                    className="w-full bg-background border border-muted/20 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors appearance-none"
-                    value={formData.inquiry}
-                    onChange={(e) => setFormData({...formData, inquiry: e.target.value})}
-                  >
-                    <option>Strategic Consulting</option>
-                    <option>Data Infrastructure Audit</option>
-                    <option>Market Intelligence Report</option>
-                    <option>Bitawd / Startup Validator</option>
-                    <option>Other / Advisory</option>
-                  </select>
+                  <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Nature of Inquiry</label>
+                  <div className="relative">
+                    <select 
+                      className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors appearance-none text-sm"
+                      value={formData.inquiry}
+                      onChange={(e) => setFormData({...formData, inquiry: e.target.value})}
+                    >
+                      <option>Strategic Consulting</option>
+                      <option>Data Infrastructure Audit</option>
+                      <option>Market Intelligence Report</option>
+                      <option>Bitawd / Startup Validator</option>
+                      <option>Other / Advisory</option>
+                    </select>
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground">
+                      <ArrowRight size={14} className="rotate-90" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Message / Brief</label>
+                  <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Message / Brief</label>
                   <textarea 
-                    rows={5}
-                    placeholder="Provide a high-level summary of your requirements..."
-                    className="w-full bg-background border border-muted/20 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors resize-none"
+                    rows={4}
+                    placeholder="Provide a high-level summary..."
+                    className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors resize-none text-sm"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                   ></textarea>
@@ -166,7 +171,7 @@ export default function ContactPage() {
 
                 <button 
                   type="submit" 
-                  className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center space-x-2 group"
+                  className="w-full py-3 md:py-4 bg-primary text-primary-foreground font-bold rounded-lg md:rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center space-x-2 group text-sm md:text-base"
                 >
                   <span>Submit Inquiry</span>
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

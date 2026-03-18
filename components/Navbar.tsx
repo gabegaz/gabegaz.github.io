@@ -11,7 +11,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const navItems = [
-  { name: "Executive Summary", path: "/" },
+  { name: "Summary", path: "/" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
