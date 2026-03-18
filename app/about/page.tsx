@@ -16,24 +16,25 @@ export default function AboutPage() {
     <div className="pt-16 md:pt-24 pb-16 md:pb-24">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Profile Section */}
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center mb-20 md:mb-32">
+        <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center mb-20 md:mb-32">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative lg:mr-auto"
           >
-            <div className="w-40 h-40 md:w-56 md:h-56 rounded-2xl overflow-hidden relative z-10 shadow-2xl">
+            <div className="w-32 h-[160px] md:w-48 md:h-[240px] rounded-3xl overflow-hidden relative z-10 shadow-2xl border-muted/10">
               <Image
-                src="/04-removebg.png"
+                src="/04-removebg2.png"
                 alt="Getachew Abegaz"
-                width={224}
-                height={224}
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500 -scale-x-100"
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                priority
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 bg-primary/10 rounded-full blur-3xl -z-0"></div>
-            <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-24 h-24 bg-accent/10 rounded-full blur-3xl -z-0"></div>
+
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-0"></div>
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-0"></div>
           </motion.div>
 
           <div className="flex-1 text-center lg:text-left">
