@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { FaviconDesign } from '@/components/Favicon';
 
 // Route segment config
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
 // Image metadata
 export const size = {
