@@ -2,19 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { 
   BarChart3, 
   ShieldCheck, 
   Cpu, 
   Globe2, 
   TrendingUp, 
-  Briefcase, 
   ChevronRight,
   Database,
   ArrowRight
 } from "lucide-react";
-import projects from "./projects_data";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -32,11 +29,6 @@ const staggerContainer = {
 };
 
 export default function Home() {
-  // Filter and order specific projects for the "Recent Projects" sidebar
-  const featuredProjectTitles = ["Data Strategy", "PyStata"];
-  const featuredProjects = projects.filter(p => featuredProjectTitles.includes(p.title))
-    .sort((a, b) => featuredProjectTitles.indexOf(a.title) - featuredProjectTitles.indexOf(b.title));
-
   return (
     <div className="flex flex-col space-y-24 pb-24">
       {/* 1. The "Dual-Core" Hero Section */}
@@ -218,7 +210,7 @@ export default function Home() {
           >
             <h3 className="text-4xl md:text-6xl font-bold mb-8">Ready to operationalize your data?</h3>
             <p className="text-xl mb-12 opacity-80 max-w-2xl mx-auto">
-              I'm available for high-impact strategic consulting.
+              I&apos;m available for high-impact strategic consulting.
             </p>
             <Link 
               href="/contact" 
