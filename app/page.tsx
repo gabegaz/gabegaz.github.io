@@ -44,7 +44,7 @@ export default function Home() {
               className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-2xl leading-relaxed"
             >
               Bridging technical architecture and economic insights to build
-              scalable risk-mitigation systems and drive financial inclusion across emerging markets.
+              scalable systems and drive value creation across emerging markets.
             </motion.p>
 
             <motion.div
