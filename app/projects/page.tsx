@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, ExternalLink, Search, BookOpen, Briefcase, Cpu, ShieldAlert, BarChart3 } from "lucide-react";
+import { Github, ExternalLink, Search, BookOpen, Briefcase, Cpu, ShieldAlert, BarChart3 } from "lucide-react";
 import projects, { Project } from "../projects_data";
 import { useState, useMemo } from "react";
 
