@@ -14,7 +14,7 @@ const projects: Project[] = [
     title: "The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia",
     description: "Advanced modeling of agricultural price volatility and climate-induced shocks to assess food security risks. This work provides critical data frameworks for risk mitigation in rural Ethiopia.",
     category: "Agricultural Development & Risk Analytics",
-    tags: ["Risk Modeling", "Price Analytics", "Food Security", "Climate Resilience", "Shock Analysis"],
+    tags: ["Price Analytics", "Food Security", "Inflation Shocks"],
     link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
     role: "Researcher"
   },

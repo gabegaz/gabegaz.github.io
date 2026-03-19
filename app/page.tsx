@@ -146,6 +146,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      
       {/* 3. Research Projects & Articles Section */}
       <section className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
@@ -171,13 +173,13 @@ export default function Home() {
             {
               title: "Price Shocks & Food Security",
               desc: "The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia.",
-              tags: ["Risk Modeling", "Food Security"],
+              tags: ["Price Analytics", "Food Security", "Inflation Shocks"],
               link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
             },
             {
               title: "Agri-Finance & Credit Access",
               desc: "Poverty and Access to Credit in Rural Ethiopia: Empirical Evidence from Coffee-Growing Households.",
-              tags: ["Financial Inclusion", "Agri-Finance"],
+              tags: ["Access to Finance", "Agri-Finance"],
               link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf",
             },
           ].map((project, i) => (

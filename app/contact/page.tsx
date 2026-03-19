@@ -183,10 +183,8 @@ export default function ContactPage() {
                       value={formData.inquiry}
                       onChange={(e) => setFormData({...formData, inquiry: e.target.value})}
                     >
-                      <option>Strategic Consulting</option>
-                      <option>Data Infrastructure Audit</option>
-                      <option>Market Intelligence Report</option>
-                      <option>Bitawd / Startup Validator</option>
+                      <option>Consulting</option>
+                      <option>Bitawd Intelligence Platform</option>
                       <option>Other / Advisory</option>
                     </select>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground">

@@ -106,64 +106,80 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Research Section */}
-        <section className="mb-20 md:mb-32">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 border-b border-muted/10 pb-6 md:pb-8">
-            <div>
-              <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Portfolio</h2>
-              <h3 className="text-3xl md:text-4xl font-bold">Featured Agri-Insurtech Research</h3>
-            </div>
-            <Link href="/projects" className="inline-flex items-center text-primary font-bold hover:underline text-sm md:text-base group mt-4 md:mt-0">
-              See more research <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {[
-              {
-                title: "Price Shocks & Food Security",
-                desc: "Advanced modeling of agricultural price volatility and climate-induced shocks. Directly informs risk mitigation and index-based insurance parameters.",
-                tags: ["Risk Modeling", "Food Security"],
-                link: "https://link.springer.com/article/10.1007/s12571-015-0467-4"
-              },
-              {
-                title: "Agri-Finance & Credit Access",
-                desc: "Empirical research on financial inclusion for coffee-growing households, highlighting credit market dynamics and risk-sharing mechanisms.",
-                tags: ["Financial Inclusion", "Agri-Finance"],
-                link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf"
-              }
-            ].map((project, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-6 md:p-8 bg-card border border-muted/10 rounded-2xl md:rounded-3xl hover:border-primary/20 transition-all flex flex-col shadow-sm"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary mb-4 sm:mb-6">
-                  <FileText size={24} />
-                </div>
-                <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">{project.title}</h4>
-                <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
-                  {project.desc}
-                </p>
-                <div className="flex items-center justify-between mt-auto pt-6 border-t border-muted/10">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="text-[10px] font-mono px-2 py-1 bg-muted/10 rounded text-muted-foreground uppercase">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a href={project.link} target="_blank" className="text-primary hover:text-primary/80 transition-colors">
-                    <ExternalLink size={18} />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+{/* 3. Research Projects & Articles Section */}
+      <section className="container mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
+          <div>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              Research Projects & Articles
+            </h3>
           </div>
-        </section>
+          <Link
+            href="/projects"
+            className="inline-flex items-center text-primary font-bold hover:underline text-sm sm:text-base group"
+          >
+            See all research{" "}
+            <ArrowRight
+              size={16}
+              className="ml-1 group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {[
+            {
+              title: "Price Shocks & Food Security",
+              desc: "The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia.",
+              tags: ["Price Analytics", "Food Security", "Inflation Shocks"],
+              link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
+            },
+            {
+              title: "Agri-Finance & Credit Access",
+              desc: "Poverty and Access to Credit in Rural Ethiopia: Empirical Evidence from Coffee-Growing Households.",
+              tags: ["Access to Finance", "Agri-Finance"],
+              link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf",
+            },
+          ].map((project, i) => (
+            <motion.div
+              key={i}
+              {...fadeInUp}
+              transition={{ delay: i * 0.1 }}
+              className="p-6 sm:p-8 bg-card border border-muted/10 rounded-2xl sm:rounded-3xl hover:border-primary/30 transition-all flex flex-col shadow-sm"
+            >
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary mb-4 sm:mb-6">
+                <FileText size={24} />
+              </div>
+              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
+                {project.title}
+              </h4>
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
+                {project.desc}
+              </p>
+              <div className="flex items-center justify-between mt-auto pt-6 border-t border-muted/10">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] font-mono px-2 py-1 bg-muted/10 rounded text-muted-foreground uppercase"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ExternalLink size={18} />
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
         {/* Contact Bridge */}
         <div className="mt-20 md:mt-32 text-center">
