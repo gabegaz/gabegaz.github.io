@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ShieldCheck,
-  Cpu,
   Globe2,
   TrendingUp,
   ChevronRight,
