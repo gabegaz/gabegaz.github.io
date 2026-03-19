@@ -3,13 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  BarChart3,
   ShieldCheck,
   Cpu,
   Globe2,
   TrendingUp,
   ChevronRight,
-  Database,
   ArrowRight,
   FileText,
   ExternalLink,
@@ -22,13 +20,6 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
-const staggerContainer = {
-  whileInView: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
 
 export default function Home() {
   return (
