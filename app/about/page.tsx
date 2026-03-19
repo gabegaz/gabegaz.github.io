@@ -39,11 +39,9 @@ export default function AboutPage() {
 
           <div className="flex-1 text-center lg:text-left">
             <motion.div {...fadeInUp}>
-              <h1 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 tracking-tight">
-                Synthesizing <span className="text-primary">Data</span> & <span className="text-accent">Institutional Strategy</span>.
-              </h1>
+
               <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                I am Getachew Ahmed Abegaz, a data strategist specializing in the intersection of Computer Science and Economic Analysis. With 20+ years of experience, I guide organizations, investors, and policymakers through the complexities of emerging markets.
+               Hi! I am Getachew Ahmed Abegaz, a data strategist specializing in the intersection of Computer Science and Economic Analysis. With 20+ years of experience, I guide organizations, investors, and policymakers through the complexities of emerging markets.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
                 <div className="flex items-start space-x-3 text-left">
@@ -113,7 +111,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 border-b border-muted/10 pb-6 md:pb-8">
             <div>
               <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Portfolio</h2>
-              <h3 className="text-3xl md:text-4xl font-bold">Research Projects & Articles</h3>
+              <h3 className="text-3xl md:text-4xl font-bold">Featured Agri-Insurtech Research</h3>
             </div>
             <Link href="/projects" className="inline-flex items-center text-primary font-bold hover:underline text-sm md:text-base group mt-4 md:mt-0">
               See more research <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -123,16 +121,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[
               {
-                title: "Ethiopian Capital Market Size Estimation",
-                desc: "Strategic lead on market projection for the ECMA, utilizing advanced econometric modeling to forecast capital flows in the newly emerging market.",
-                tags: ["Market Analysis", "Forecasting"],
-                link: "https://ecma.gov.et/download/potential-market-size-estimation-and-projection-for-the-developing-ethiopian-capital-market/"
+                title: "Price Shocks & Food Security",
+                desc: "Advanced modeling of agricultural price volatility and climate-induced shocks. Directly informs risk mitigation and index-based insurance parameters.",
+                tags: ["Risk Modeling", "Food Security"],
+                link: "https://link.springer.com/article/10.1007/s12571-015-0467-4"
               },
               {
-                title: "ICT Sector Impact on Growth & Employment",
-                desc: "Expert analysis on how technology impacts the Ethiopian economy, positioning ICT as a primary driver for growth and employment dynamics.",
-                tags: ["Digital Transformation", "Economics"],
-                link: "https://www.theigc.org/publications/synthesis-impact-ict-sector-growth-and-employment-ethiopia"
+                title: "Agri-Finance & Credit Access",
+                desc: "Empirical research on financial inclusion for coffee-growing households, highlighting credit market dynamics and risk-sharing mechanisms.",
+                tags: ["Financial Inclusion", "Agri-Finance"],
+                link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf"
               }
             ].map((project, i) => (
               <motion.div 

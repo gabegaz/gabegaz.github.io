@@ -37,25 +37,25 @@ export default function Home() {
       <section className="relative overflow-hidden pt-12 pb-12 lg:pt-32 lg:pb-24 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl">
-
             <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]"
-              >
-                Scaling Markets with <span className="text-primary">Strategic Architecture</span>.
-              </motion.h1>
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]"
+            >
+              Scaling <span className="text-primary">Markets</span> with
+              Data-Driven <span className="text-primary">Strategy</span>.
+            </motion.h1>
 
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-2xl leading-relaxed"
-              >
-                Bridging technical systems and economic strategy to operationalize data for institutional growth.
-              </motion.p>
-
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-2xl leading-relaxed"
+            >
+              Bridging technical architecture and economic insights to build
+              scalable systems and drive value for growth accross emerging markets{" "}
+            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -84,14 +84,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* 2. The "Ventures" Section */}
       <section className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
           <div>
             {/* <h2 className="text-xs sm:text-xs font-bold text-primary uppercase tracking-widest mb-2">Proof of Capability</h2> */}
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Core Ventures
+              Strategic Ventures
             </h3>
           </div>
         </div>
@@ -139,24 +138,23 @@ export default function Home() {
                 <Cpu size={24} />
               </div>
               <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                Startup Validator
+                Risk Validator
               </h4>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                A Data-Driven De-risking Engine. Utilizing multi-agent AI
-                systems to validate business models against real-world economic
-                constraints.
+                A Data-Driven De-risking Engine. Utilizing local data
+                to validate business models and market entry parameters
+                against real-world economic constraints.
               </p>
               <Link
                 href="#"
                 className="inline-flex items-center text-accent font-bold hover:underline text-sm sm:text-base"
               >
-                Explore Engine <ChevronRight size={16} />
+                On Progress <ChevronRight size={16} />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* 3. Research Projects & Articles Section */}
       <section className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
@@ -180,16 +178,16 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {[
             {
-              title: "Ethiopian Capital Market Size Estimation",
-              desc: "Strategic lead on market projection for the ECMA, utilizing advanced econometric modeling to forecast capital flows in the newly emerging market.",
-              tags: ["Market Analysis", "Forecasting"],
-              link: "https://ecma.gov.et/download/potential-market-size-estimation-and-projection-for-the-developing-ethiopian-capital-market/",
+              title: "Price Shocks & Food Security",
+              desc: "The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia.",
+              tags: ["Risk Modeling", "Food Security"],
+              link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
             },
             {
-              title: "ICT Sector Impact on Growth & Employment",
-              desc: "Expert analysis on how technology impacts the Ethiopian economy, positioning ICT as a primary driver for growth and employment dynamics.",
-              tags: ["Digital Transformation", "Economics"],
-              link: "https://www.theigc.org/publications/synthesis-impact-ict-sector-growth-and-employment-ethiopia",
+              title: "Agri-Finance & Credit Access",
+              desc: "Poverty and Access to Credit in Rural Ethiopia: Empirical Evidence from Coffee-Growing Households.",
+              tags: ["Financial Inclusion", "Agri-Finance"],
+              link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf",
             },
           ].map((project, i) => (
             <motion.div
@@ -231,78 +229,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. The "Consulting Expertise" Grid */}
-      <section className="bg-card/30 py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest mb-2">
-              Expertise
-            </h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-              Strategic Solutions for Business Outcomes
-            </h3>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
-              Leveraging decades of research and data work to build systems that
-              help organizations navigate the complexities of emerging markets.
-            </p>
-          </div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8"
-          >
-            {[
-              {
-                icon: <Database className="text-primary" />,
-                title: "Data-Driven Operations",
-                desc: "Optimizing internal workflows with custom analytics and automated decision pipelines.",
-              },
-              {
-                icon: <BarChart3 className="text-primary" />,
-                title: "Market Intelligence",
-                desc: "Deep-dive research and predictive modeling on the Ethiopian macroeconomic landscape.",
-              },
-              {
-                icon: <Cpu className="text-primary" />,
-                title: "AI Integration",
-                desc: "Deploying multi-agent research systems to drive institutional efficiency and de-risk growth.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                variants={fadeInUp}
-                className="p-6 sm:p-8 bg-background border border-muted/10 rounded-xl sm:rounded-2xl hover:shadow-xl transition-all"
-              >
-                <div className="mb-4 sm:mb-6">{item.icon}</div>
-                <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">
-                  {item.title}
-                </h4>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+
+
 
       {/* Final CTA */}
-        {/* Contact Bridge */}
-        <div className="mt-10 md:mt-32 text-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center space-x-2 text-xl md:text-2xl font-bold hover:text-primary transition-colors group"
-          >
-            <span>Ready for a Strategic Partnership?</span>
-            <ArrowRight
-              size={24}
-              className="group-hover:translate-x-2 transition-transform"
-            />
-          </Link>
-        </div>{" "}
+      {/* Contact Bridge */}
+      <div className="mt-10 md:mt-32 text-center">
+        <Link
+          href="/contact"
+          className="inline-flex items-center space-x-2 text-xl md:text-2xl font-bold hover:text-primary transition-colors group"
+        >
+          <span>Ready for a Strategic Partnership?</span>
+          <ArrowRight
+            size={24}
+            className="group-hover:translate-x-2 transition-transform"
+          />
+        </Link>
+      </div>{" "}
     </div>
   );
 }

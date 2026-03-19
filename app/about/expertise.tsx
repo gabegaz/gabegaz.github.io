@@ -1,13 +1,16 @@
 const expertise = [
-   {
-    title: 'Research & Policy Analysis:',
-    description: 'Conducting in-depth research on emerging markets, with a focus on macroeconomic policy, financial markets, and technology. I specialize in synthesizing complex information to provide actionable intelligence for policymakers and strategic investment decisions.'
+  {
+    title: 'Agri-Risk & Strategic Analytics',
+    description: 'Specializing in the modeling of agricultural productivity, price volatility, and climate-induced shocks. I synthesize complex data into actionable intelligence to inform index-based insurance design and institutional risk management.'
   },
   {
-    title: 'Data and AI Strategy',
-    description: 'Designing and implementing AI and data-driven strategies to create competitive advantages. I leverage opensource and proprietory tools to build automated analytics pipelines, interactive dashboards, and decision-support tools that enhance operational efficiency.'
+    title: 'Data-Driven Project Execution',
+    description: 'Proven track record in managing complex, multi-stakeholder initiatives at the intersection of tech and policy. I build automated analytics pipelines and decision-support systems that ensure high-quality, timely delivery of strategic objectives.'
   },
-   
+  {
+    title: 'Financial Inclusion Strategy',
+    description: 'Deep expertise in analyzing credit market dynamics and rural financial systems. I design data-led strategies to expand market reach and de-risk livelihoods for smallholder farmers and emerging market households.'
+  }
 ];
 
 export default expertise;

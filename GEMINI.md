@@ -1,108 +1,99 @@
+Project Manager, Partnerships & Consulting
+Partnerships & Consulting - Addis Ababa, N/A
+Title:  Project Manager, Partnerships & Consulting
 
-Below is a list of related works. Put them under /projects using the following guideline.
+Location:  Addis Ababa, Ethiopia - On-site
 
----
-Guideline:
+Reports to: Associate Director, Project Execution
 
-Category 1: Market Intelligence & Capital Strategy
-These are your "Heavy Hitters." They prove you understand the high-level financial landscape of Ethiopia—critical for CEOs and Investors.
-
-Potential Market Size Estimation and Projection for the Developing Ethiopian Capital Market (Ethiopia Capital Market Authority).
-
-Why: This is the most "Bitawd-relevant" work. It proves you can forecast market size and analyze capital flows. Tag as: Market Sizing, Financial Forecasting.
-
-Structural Transformation via Services or Manufacturing? Evidence from Ethiopia (IGC).
-
-Why: This demonstrates strategic thinking at the highest level. Every CEO in Ethiopia is asking this question right now. Tag as: Sectoral Strategy, Economic Policy.
-
-Category 2: Digital Economy & Technology
-This bridges your MSc in Computer Science with your Economics expertise.
-
-Synthesis on the Impact of ICT Sector on Growth and Employment in Ethiopia (IGC).
-
-Why: It positions you as the expert on how technology impacts the Ethiopian economy—essential for your Startup Validator tool. Tag as: Digital Transformation, Tech-Econometrics.
-
-Category 3: Macroeconomic Risk & Volatility Analysis
-This proves your "EVI" (Economic Value of Information) framework for risk mitigation.
-
-The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia (Journal of Food Security).
-
-Why: It shows your ability to model volatility and price shocks, a major pain point for Ethiopian businesses. Tag as: Risk Modeling, Price Analytics.
-
-Fiscal Incentives for Youth Unemployment and Informal Business in Ethiopia (IGC).
-
-Why: It shows you understand the regulatory and fiscal "hurdles" (the "Red Tape") that the Startup Validator helps founders navigate. Tag as: Regulatory Analysis, Fiscal Policy.
-
-Category 4: Specialized Sectoral Depth (Agriculture/Finance)
-Since you specialize in these sectors, choose the most technically rigorous models.
-
-The Impact of Remittances on the Ethiopian Economy: A CGE Analysis (EEA).
-
-Why: Using a "CGE Analysis" (Computable General Equilibrium) is a massive technical flex. It proves you can handle complex, multi-variable simulations. Tag as: Advanced Econometric Modeling.
-
-Poverty and Access to Credit in Rural Ethiopia: Evidence from Coffee-Growing Households (EEA).
-
-Why: It demonstrates your ground-level knowledge of the financial sector and the credit market. Tag as: Financial Inclusion, Agri-Finance.
-
-How to Display Them (The "Executive" View)
-On your website, don't just put a link. Use this format to emphasize your Triple Threat (CS, Econ, MBA):
-
-Potential Market Size for the Ethiopian Capital Market
-Strategic lead on market projection for the ECMA, utilizing advanced econometric modeling to forecast capital flows in the newly emerging market.
-[Market Analysis] [Forecasting] [Policy Design]
-[Link to Paper]
-
----
+Start date: 1st April 2025
 
 
 
+About Pula:
+
+We are an insuretech firm that provides agriculture insurance design and execution services, specialising in index based insurance and are backed by top tier VC investors who have invested more than $25 million in the business. Since 2015 we have provided climate insurance to 19 million smallholder farmers, 41% of which were women across 13 markets in Africa and Asia who pay an average of $6.8 per season to insure their crops. So far we've unlocked over $2.5 billion of capital from local and international insurance markets for climate risks since we started in 2015 and paid out $40.8 million to our client farmers. 
+
+According to the UN’s InterGovernmental Panel for Climate Change more than 3.3 billion people globally live in hotspots with high vulnerability to climate change and are now already feeling the impact of climate change through increased temperatures and increasingly erratic rainfall. Insurance is a tool for vulnerable households in these affected regions to adapt to the effects that climate change is already having today on these households. It is a tool that enables for compensation payment for losses and damages that these households had no part in causing. Insurance compensation enables these households to make adjustments to their day to day livelihoods and practices and therefore allows for an equitable and just transition.
+
+We are a for profit organisation, and have raised over $10 million from leading venture and institutional investors as well as developed philanthropic relationships with private foundations and bilateral donors such as the Bill & Melinda Gates Foundation and German Insure Resilience Solutions Fund that have accelerated investments in our target markets.
+
+At Pula, our values are: 
+
+Obsessed with results: We are responsible for our future and therefore we get things done!
+Connect the Dots: We continuously identify different customer needs & business problems and build solutions that deliver value.
+Have a Can do Attitude! We dare to do things differently to make things work.
+We have each others’ back: We look out for each other & we share high quality, timely feedback that makes us better. 
+Pula is proudly fast paced, constantly learning from the challenges we face and overcome. We are proudly culturally diverse but united in our ambition of continuous high-performance. By challenging ourselves we believe that we can overcome the hard problems we love solving.
 
 
-Related works:
-The impacts of COVID-19 in the Amhara National Regional State
-International Growth Center. Publications-Policy Brief With Tilahun Emiru.
-https://www.theigc.org/collections/impacts-covid-19-amhara-national-regional-state
 
-International Migration, Remittances and Poverty Alleviation in Ethiopia
-Ethiopian Journal of Development Research, Volume 33, No. 2, October 2011. With Emerta Assaminew, Kassahun Aberra and Tewodros Makonnen.
-https://ejol.aau.edu.et/index.php/EJDR/article/view/3577
-.
-Fiscal incentives for youth unemployment and informal business in Ethiopia
-International Growth Center Publications With Ibrahim Worku Hassen, Nancy Benjamin. 
-https://www.theigc.org/publications/fiscal-incentives-youth-unemployment-and-informal-business-ethiopia
+What you will be doing:
 
-Synthesis on the impact of ICT sector on growth and employment in Ethiopia. International Growth Center Publications. With Seneshaw Tamiru.
-https://www.theigc.org/publications/synthesis-impact-ict-sector-growth-and-employment-ethiopia
+Pula is seeking an experienced Project Manager. She/he must have a love for building partnerships across commercial and public sector, profits and nonprofits, probing into data, solving challenging problems, and structuring complex processes, while also being comfortable building a cutting-edge ag-tech startup. 
+
+She / he will have full accountability for a set of projects and works with the Pula business units and external stakeholders to ensure the timely, successful and high quality delivery of grant-funded projects and initiatives at Pula’s Ethiopia office. Such initiatives are supported and supervised by non-commercial partners, such as NGOs, IGOs, UN agencies, government bodies, research organizations and other third sector stakeholders, to expand Pula’s market reach and impact, create growth and revenue opportunities and meet business and social impact goals. The Project Manager will report to the Associate Director, and work in close collaboration with the partnerships, product, commercial, actuarial and operations teams. 
 
 
-Poverty and Access to Credit in Rural Ethiopia: EmpiricalEvidence from Coffee- Growing Households
-Proceedings of the 7th International Conference on the Ethiopian Economy, Volume II; Ethiopian Economics Association (EEA), May 2010.
-https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf
+
+A detailed job description and roles & responsibilities for the position is as follows: 
+
+Project planning and execution (40%) 
+
+Define project scope, objectives, deliverables, tasks, and resource requirements, and develop detailed project plans with clear timelines and dependencies.
+Conduct feasibility studies and lead the planning and implementation of grant-funded projects to inform strategic and investment decisions.
+Monitor project progress and team performance using project management tools (e.g., Gantt charts, task lists, workflow systems), ensuring adherence to deadlines and milestones.
+Communicate timelines, priorities, and risks to relevant staff and stakeholders on an ongoing basis.
+Manage project priorities, business drivers, and risks in close coordination with the Partnerships team and senior management.
+Lead project meetings and drive execution across cross-functional teams (Tech, Sales, Actuarial, Operations), including progress tracking, risk mitigation, and scope adjustments to ensure on-time delivery.
+Reporting and budget management (25%) 
+
+Oversee invoicing, accounting, financial reporting, paperwork, grant records and other administrative functions to ensure successful execution of the grant process. 
+Monitor and report on progress to external stakeholders (donors, partners).
+Author or contribute to project reports (evaluations, assessments, mapping exercises).
+Assure quality and compliance in deliverables by editing/proofreading.
+Provide information/training to staff on grant deliverables and reporting requirements.
+Stakeholder management (35%)
+
+Coordinate with other departments to gather data and support them in producing analysis that may need to be part of the progress, interim or end line reports.
+Work with Pula department heads and team leads to ensure that projects align with and contribute to the company’s strategy and goals
+Manage stakeholder relations, including donors and private/public sector partners 
+Plan and lead regular meetings with donors and other stakeholders to discuss progress
+Identify and manage project risks, issues and remediation and ensure these are communicated and coordinated with the donors.
+Hire and manage external consultants as needed to execute to specific project deliverables.
+
+The right applicant would have the following skillset: 
+
+At least 5 years experience managing complex, multi-stakeholder projects in social enterprise, NGO, UN or similar organization
+Skills and experience in working with diverse set of stakeholders and building strong
+relationships with philanthropic partners
+Strong collaborative skills, ability to work with multi cultural and multi disciplinary
+teams to deliver to our clients 
+Strong quantitative and data analytics skills, as well as report writing and presentation skills
+Ability to translate complex and challenging concepts into detailed action plans
+Exceptional work ethic and integrity: the ability to self-manage assigned tasks/deliverables 
+Ability to prioritize work, meet inflexible deadlines and produce timely, high quality results 
+Bachelor’s degree with an outstanding academic record 
+Strong presentation and speaking skills (articulate, concise, engaging, persuasive) 
+Comfortable with GSuite applications (Google Sheets, Google Docs, G-Slides, etc.)
+Willing and comfortable to travel (5% of the time) to various parts of Ethiopia where we have operations 
+Fluency in Amharic and English is required 
 
 
-Consumption of Animal Source Foods in Ethiopia: Patterns and Changes and Determinants.
-IFPRI/Strategy Support Program. Working Paper 113. January 2018. With Bart Minten and Ibrahim Worku (ESSP/IFPRI).
-https://essp.ifpri.info/2018/01/23/consumption-of-animal-source-foods-in-ethiopia-patterns-changes-and-determinants/
+What Pula will bring to the table:
 
-Cereal Productivity in Ethiopia. An Analysis Based on ERHS Data
-Ethiopian Journal of Economics Volume XX, Number 2, October 2011.
-https://ethiopianjournalofeconomics.org/index.php/EJE/article/view/112
+Growth potential: At Pula, we are building the systems that enable farmers worldwide to access insurance, using technology to insure this previously uninsured worldwide. We work in over 11+ countries across Africa and Asia, and by 2025, have facilitated insurance cover to around 24 million farmers. We are a for profit, and have raised over $25 million from leading venture and institutional investors as well as developed philanthropic relationships with private foundations and bilateral donors such as the Bill & Melinda Gates Foundation and German Insure Resilience Solutions Fund that have accelerated investments in our target markets.
+Market Leader: Not only is the opportunity massive, but Pula is by far the market leader in it’s category with a total of 24M farmers insured as of 2025.
+Solid: Pula has been funded by leading venture capital investors (Omidyar Network, ACCION, MercyCorps) and global philanthropic institutions (MasterCard Foundation, CGAP/World Bank as well as the Bill and Melinda Gates Foundation). Pula closed an oversubscribed $20m series B funding despite the economic downturn.
+Respected: Winner of the Singapore FinTech Festival 2019, Winner of The InsureTech of the Award, Africa. Featured on TED talks, The New York Times, The Economist.
+Impact and creation: This is a high-impact role, that offers a unique opportunity to bring the company to the next level, whilst developing new strategies, approaches and ideas.
+Leadership: The founders & CEO foster a culture of transparency, respect, high performance, pragmatism, execution and personal development.
+Purpose: It is rare to find a professional opportunity that offers accelerated professional development and a life purpose. Pula is going through a second phase of accelerated growth that will naturally provide professional development, whilst contributing to the financial stability of small farmers in the emerging markets.
+Remuneration: Competitive base salary accordingly with seniority and experience, an employee share option plan (ESOP) and other attractive upside offerings.
 
-The Short-term Impact of Price Shocks on Food Security–Evidence from Urban and Rural Ethiopia
-Journal of Food Security. Volume 7. Issue 3 (2015), Page 657-679. With Matthias Kalkuhl and Julia Anna Matz.
-https://link.springer.com/article/10.1007/s12571-015-0467-4
-Economy-wide impacts of the Productive Safety Net Program (PSNP)
-Research Note. 2016. with Mateusz J. Filipski, J. Edward Yaylor, Tadele Ferede, Alemayehu Seyoum Taffesse, Xinshen Diao, Filip.
-https://essp.ifpri.info/2016/07/14/synopsis-economy-wide-impacts-of-the-productive-safety-net-programme-psnp/
 
- 
-Structural transformation via services or manufacturing? Evidence from Ethiopia. Working paper11 Nov 2025. with Mulu Gebreeyesus.
-https://www.theigc.org/publications/structural-transformation-services-or-manufacturing-evidence-ethiopia
+To learn more about Pula:
 
-Potential Market Size Estimation and Projection for the Developing Ethiopian Capital Market
-Tewodros Makonnen Gebrewold and Getachew Ahmed Abegaz. Ethiopia Capital Market Authority.
-https://ecma.gov.et/download/potential-market-size-estimation-and-projection-for-the-developing-ethiopian-capital-market/
-
-The Impact of Remittances on the Ethiopian Economy: A CGE Analysis
-Proceedings of the 8th International Conference on the Ethiopian Economy, Volume I; Ethiopian Economics Association(EEA), June 2011. With With Emerta Assaminew, Kassahun Aberra and Tewodros Makonnen.
-
+TED Talk: Crop Insurance, an Idea Worth Seeding
+New York Times: He Grew up on a Farm. Now, He Helps Protect Them
+The Economist: The Poor, Who Most Need Insurance, Are Least Likely to Have It
