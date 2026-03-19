@@ -11,6 +11,7 @@ import {
   ArrowRight,
   FileText,
   ExternalLink,
+  BarChart3,
 } from "lucide-react";
 
 const fadeInUp = {
@@ -20,12 +21,11 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
-
 export default function Home() {
   return (
     <div className="flex flex-col space-y-16 md:space-y-24 pb-16 md:pb-24">
-      {/* 1. The "Dual-Core" Hero Section */}
-      <section className="relative overflow-hidden pt-12 pb-12 lg:pt-32 lg:pb-24 px-4 sm:px-6">
+      {/* 1. The "Dual-Core" Hero Section - Updated for Full Screen */}
+      <section className="relative min-h-screen flex items-center overflow-hidden py-12 lg:py-24 px-4 sm:px-6 pt-12 md:pt-4 lg:pt-4 pb-32">
         <div className="container mx-auto">
           <div className="max-w-4xl">
             <motion.h1
@@ -45,7 +45,7 @@ export default function Home() {
               className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-2xl leading-relaxed"
             >
               Bridging technical architecture and economic insights to build
-              scalable systems and drive value for growth accross emerging markets{" "}
+              scalable risk-mitigation systems and drive financial inclusion across emerging markets.
             </motion.p>
 
             <motion.div
@@ -75,13 +75,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* 2. The "Ventures" Section */}
+
+      {/* 2. Strategic Initiatives Section (Formerly Ventures) */}
       <section className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
           <div>
-            {/* <h2 className="text-xs sm:text-xs font-bold text-primary uppercase tracking-widest mb-2">Proof of Capability</h2> */}
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Strategic Ventures
+              Strategic Initiatives
             </h3>
           </div>
         </div>
@@ -99,19 +99,18 @@ export default function Home() {
                 <Globe2 size={24} />
               </div>
               <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                Bitawd
+                Bitawd: Strategic Intelligence
               </h4>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                The Strategic Command Center for CEOs. A comprehensive data
-                analytics platform designed to provide institutional-grade
-                insights into market dynamics.
+                A personal initiative to digitize and decode the Ethiopian economy. I architected this 
+                platform to transform 15 years of macroeconomic data into a cohesive analytical tool.
               </p>
               <Link
                 href="https://www.bitawd.com"
                 target="_blank"
                 className="inline-flex items-center text-primary font-bold hover:underline text-sm sm:text-base"
               >
-                View Platform <ChevronRight size={16} />
+                Explore Economic Insights <ChevronRight size={16} />
               </Link>
             </div>
           </motion.div>
@@ -126,28 +125,23 @@ export default function Home() {
             </div>
             <div className="relative z-10">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center text-accent mb-4 sm:mb-6">
-                <Cpu size={24} />
+                <BarChart3 size={24} />
               </div>
               <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                Risk Validator
+                Market Risk Validator
               </h4>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                A Data-Driven De-risking Engine. Utilizing local data
-                to validate business models and market entry parameters
-                against real-world economic constraints.
+                An automated diagnostic tool designed to de-risk market entry. It synthesizes regulatory 
+                requirements and economic indicators to provide institutional go/no-go analysis.
               </p>
-              <Link
-                href="#"
-                className="inline-flex items-center text-accent font-bold hover:underline text-sm sm:text-base"
-              >
-                On Progress <ChevronRight size={16} />
-              </Link>
+              <div className="flex items-center text-accent font-bold text-sm sm:text-base cursor-default">
+                Internal Strategic Tool <span className="mx-2 text-muted-foreground/30">|</span> In-Development
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      
       {/* 3. Research Projects & Articles Section */}
       <section className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
@@ -222,12 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
-
       {/* Final CTA */}
-      {/* Contact Bridge */}
       <div className="mt-10 md:mt-32 text-center">
         <Link
           href="/contact"
@@ -239,7 +228,7 @@ export default function Home() {
             className="group-hover:translate-x-2 transition-transform"
           />
         </Link>
-      </div>{" "}
+      </div>
     </div>
   );
 }
