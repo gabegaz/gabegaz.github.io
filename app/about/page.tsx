@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, MessageSquare, ArrowRight, Award, BookOpen, GraduationCap } from 'lucide-react';
+import { Linkedin, Mail, MessageSquare, ArrowRight, Award, BookOpen, GraduationCap, FileText, ExternalLink } from 'lucide-react';
 import expertise from './expertise';
 
 const fadeInUp = {
@@ -39,8 +39,8 @@ export default function AboutPage() {
 
           <div className="flex-1 text-center lg:text-left">
             <motion.div {...fadeInUp}>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 tracking-tight">
-                Synthesizing <span className="text-primary">Data</span> & <span className="text-accent">Economics</span>.
+              <h1 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 tracking-tight">
+                Synthesizing <span className="text-primary">Data</span> & <span className="text-accent">Institutional Strategy</span>.
               </h1>
               <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 I am Getachew Ahmed Abegaz, a data strategist specializing in the intersection of Computer Science and Economic Analysis. With 20+ years of experience, I guide organizations, investors, and policymakers through the complexities of emerging markets.
@@ -103,6 +103,65 @@ export default function AboutPage() {
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{item.title}</h4>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Research Section */}
+        <section className="mb-20 md:mb-32">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 border-b border-muted/10 pb-6 md:pb-8">
+            <div>
+              <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Portfolio</h2>
+              <h3 className="text-3xl md:text-4xl font-bold">Research Projects & Articles</h3>
+            </div>
+            <Link href="/projects" className="inline-flex items-center text-primary font-bold hover:underline text-sm md:text-base group mt-4 md:mt-0">
+              See more research <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {[
+              {
+                title: "Ethiopian Capital Market Size Estimation",
+                desc: "Strategic lead on market projection for the ECMA, utilizing advanced econometric modeling to forecast capital flows in the newly emerging market.",
+                tags: ["Market Analysis", "Forecasting"],
+                link: "https://ecma.gov.et/download/potential-market-size-estimation-and-projection-for-the-developing-ethiopian-capital-market/"
+              },
+              {
+                title: "ICT Sector Impact on Growth & Employment",
+                desc: "Expert analysis on how technology impacts the Ethiopian economy, positioning ICT as a primary driver for growth and employment dynamics.",
+                tags: ["Digital Transformation", "Economics"],
+                link: "https://www.theigc.org/publications/synthesis-impact-ict-sector-growth-and-employment-ethiopia"
+              }
+            ].map((project, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-6 md:p-8 bg-card border border-muted/10 rounded-2xl md:rounded-3xl hover:border-primary/20 transition-all flex flex-col shadow-sm"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary mb-4 sm:mb-6">
+                  <FileText size={24} />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">{project.title}</h4>
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
+                  {project.desc}
+                </p>
+                <div className="flex items-center justify-between mt-auto pt-6 border-t border-muted/10">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="text-[10px] font-mono px-2 py-1 bg-muted/10 rounded text-muted-foreground uppercase">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a href={project.link} target="_blank" className="text-primary hover:text-primary/80 transition-colors">
+                    <ExternalLink size={18} />
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
