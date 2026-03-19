@@ -1,11 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Search, BookOpen, Briefcase, Cpu, ShieldAlert, BarChart3 } from "lucide-react";
+import { 
+  Github, 
+  ExternalLink, 
+  Search, 
+  BookOpen, 
+  Briefcase, 
+  Cpu, 
+  ShieldAlert, 
+  BarChart3,
+  LucideIcon // Added this type for strict typing
+} from "lucide-react";
 import projects, { Project } from "../projects_data";
 import { useState, useMemo } from "react";
 
-const categoryIcons: Record<string, any> = {
+// Fixed Error 1: Replaced 'any' with 'LucideIcon'
+const categoryIcons: Record<string, LucideIcon> = {
   "Market Intelligence & Capital Strategy": BarChart3,
   "Digital Economy & Technology": Cpu,
   "Macroeconomic Risk & Volatility Analysis": ShieldAlert,
@@ -67,7 +78,8 @@ export default function ProjectsPage() {
 
         {categories.length > 0 ? (
           <div className="space-y-16 md:space-y-24">
-            {categories.map((category, catIndex) => {
+            {/* Fixed Error 2: Removed unused 'catIndex' */}
+            {categories.map((category) => {
               const Icon = categoryIcons[category] || BookOpen;
               return (
                 <section key={category} className="space-y-8">
@@ -147,8 +159,9 @@ export default function ProjectsPage() {
               <Search size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2">No results found</h3>
+            {/* Fixed Error 3: Escaped quotes and apostrophes */}
             <p className="text-muted-foreground max-w-sm mx-auto">
-              We couldn't find any projects or research matching "{searchTerm}". Try a different search term.
+              We couldn&apos;t find any projects or research matching &quot;{searchTerm}&quot;. Try a different search term.
             </p>
           </div>
         )}
