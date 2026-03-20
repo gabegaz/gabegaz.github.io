@@ -175,23 +175,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Nature of Inquiry</label>
-                  <div className="relative">
-                    <select 
-                      className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors appearance-none text-sm"
-                      value={formData.inquiry}
-                      onChange={(e) => setFormData({...formData, inquiry: e.target.value})}
-                    >
-                      <option>Consulting</option>
-                      <option>Bitawd Intelligence Platform</option>
-                      <option>Other / Advisory</option>
-                    </select>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground">
-                      <ArrowRight size={14} className="rotate-90" />
-                    </div>
-                  </div>
-                </div>
 
                 <div className="space-y-2">
                   <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Message / Brief</label>
