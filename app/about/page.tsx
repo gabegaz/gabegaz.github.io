@@ -16,12 +16,12 @@ export default function AboutPage() {
     <div className="pt-16 md:pt-24 pb-16 md:pb-24">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Profile Section */}
-        <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center mb-20 md:mb-32">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-20 md:mb-32">
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative lg:mr-auto"
+            className="relative lg:ml-0"
           >
             <div className="w-32 h-[160px] md:w-48 md:h-[240px] rounded-3xl overflow-hidden relative z-10 shadow-2xl border-muted/10">
               <Image
