@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants, TargetAndTransition } from "framer-motion";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -13,190 +13,289 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 },
+// Refined animation variants for premium consulting feel
+const baseTransition = {
+  duration: 0.8,
+  ease: [0.16, 1, 0.3, 1] as const,
+};
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: baseTransition,
+  },
+};
+
+// Variant for elements that animate when they come into view
+const fadeInUpVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: baseTransition,
+  },
 };
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-16 md:space-y-24 pb-16 md:pb-24">
-      {/* 1. The "Dual-Core" Hero Section - Updated for Full Screen */}
-      <section className="relative min-h-screen flex items-center overflow-hidden py-12 lg:py-24 px-4 sm:px-6 pt-12 md:pt-4 lg:pt-4 pb-32">
-        <div className="container mx-auto">
-          <div className="max-w-4xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]"
+    <div className="flex flex-col space-y-24 md:space-y-32 pb-24 md:pb-32">
+      {/* 1. Premium Consulting Hero Section */}
+      <section className="relative min-h-[95vh] flex items-center overflow-hidden py-24 lg:py-32 px-6">
+        {/* Visual Sophistication: Subtle Mesh Glow & Grid Pattern */}
+        <div className="absolute inset-0 -z-10 bg-[#0a0a0a]">
+          <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08)_0%,transparent_70%)]" />
+        </div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="container mx-auto"
+        >
+          <div className="max-w-6xl">
+            {/* Personal Greeting / Eyebrow */}
+            <motion.span
+              variants={itemVariants}
+              className="inline-block text-primary font-mono text-xs md:text-sm uppercase tracking-[0.3em] mb-6"
             >
-              Scaling <span className="text-primary">Markets</span> with
-              Data-Driven <span className="text-primary">Strategy</span>.
+              Data/AI Strategy Advisor
+            </motion.span>
+
+            <motion.h1
+              variants={itemVariants}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-10 leading-[0.9] text-foreground"
+            >
+              Scaling Markets <br className="hidden lg:block" />
+              with <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
+                Data-Driven
+              </span> Strategy
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-2xl leading-relaxed"
+              variants={itemVariants}
+              className="text-lg md:text-2xl text-muted-foreground mb-14 max-w-4xl leading-relaxed font-normal tracking-tight"
             >
-              Bridging technical architecture and economic insights to build
-              scalable systems and drive value creation across emerging markets.
+              I bridge the gap between raw information and measurable returns
+              through high-level economic insights, strategic valuation of
+              information assets, and custom analytical infrastructure.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-6"
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6"
             >
               <Link
                 href="/contact"
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 transition-all flex items-center justify-center space-x-2 group shadow-xl shadow-primary/25 text-sm sm:text-base"
+                className="group relative px-10 py-5 bg-primary text-primary-foreground font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-3 shadow-2xl shadow-primary/20 overflow-hidden"
               >
-                <span>Inquire for Consulting</span>
+                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span className="relative">Inquire for Consulting</span>
                 <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
+                  size={20}
+                  className="relative group-hover:translate-x-1 transition-transform"
                 />
               </Link>
+
               <Link
                 href="https://www.bitawd.com"
                 target="_blank"
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-card border border-muted/20 hover:border-primary/50 text-foreground font-bold rounded-full transition-all flex items-center justify-center space-x-2 text-sm sm:text-base"
+                className="px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 text-foreground font-bold rounded-xl transition-all flex items-center justify-center group"
               >
                 <span>Explore Bitawd</span>
+                <ChevronRight
+                  size={20}
+                  className="ml-2 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
+                />
               </Link>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
-
       {/* 2. Strategic Initiatives Section (Formerly Ventures) */}
-      <section className="container mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
+      <section className="container mx-auto px-6">
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 space-y-4 md:space-y-0"
+        >
           <div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <span className="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">
+              Institutional Platforms
+            </span>
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">
               Strategic Initiatives
             </h3>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <motion.div
-            {...fadeInUp}
-            className="group relative p-6 sm:p-8 bg-card border border-muted/10 rounded-2xl sm:rounded-3xl overflow-hidden hover:border-primary/30 transition-all shadow-sm"
+            variants={fadeInUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="group relative p-8 sm:p-10 bg-card border border-muted/10 rounded-3xl overflow-hidden hover:border-primary/30 transition-all shadow-sm"
           >
-            <div className="absolute top-0 right-0 p-4 sm:p-8 text-primary/10 group-hover:text-primary/20 transition-colors hidden sm:block">
-              <TrendingUp size={120} />
+            <div className="absolute top-0 right-0 p-8 text-primary/10 group-hover:text-primary/20 transition-colors hidden sm:block">
+              <TrendingUp size={140} />
             </div>
             <div className="relative z-10">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary mb-4 sm:mb-6">
-                <Globe2 size={24} />
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                <Globe2 size={28} />
               </div>
-              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                Bitawd: Strategic Intelligence
+              <h4 className="text-2xl sm:text-3xl font-bold mb-4 tracking-tight">
+                Bitawd: Economic Intelligence
               </h4>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                A personal initiative to digitize and decode the Ethiopian economy. I architected this 
-                platform to transform 15 years of macroeconomic data into a cohesive analytical tool.
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
+                A high-fidelity digital twin of the Ethiopian economy. I
+                architected this platform to synthesize 15+ years of
+                macroeconomic indicators into institutional-grade analytical
+                tools.
               </p>
               <Link
                 href="https://www.bitawd.com"
                 target="_blank"
-                className="inline-flex items-center text-primary font-bold hover:underline text-sm sm:text-base"
+                className="inline-flex items-center text-primary font-bold hover:underline text-base group"
               >
-                Explore Economic Insights <ChevronRight size={16} />
+                Access Economic Insights{" "}
+                <ChevronRight
+                  size={18}
+                  className="ml-1 group-hover:translate-x-1 transition-transform"
+                />
               </Link>
             </div>
           </motion.div>
 
           <motion.div
-            {...fadeInUp}
-            transition={{ delay: 0.1 }}
-            className="group relative p-6 sm:p-8 bg-card border border-muted/10 rounded-2xl sm:rounded-3xl overflow-hidden hover:border-accent/30 transition-all shadow-sm"
+            variants={fadeInUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{
+              ...((fadeInUpVariants.visible as TargetAndTransition)
+                .transition || {}),
+              delay: 0.1,
+            }}
+            className="group relative p-8 sm:p-10 bg-card border border-muted/10 rounded-3xl overflow-hidden hover:border-accent/30 transition-all shadow-sm"
           >
-            <div className="absolute top-0 right-0 p-4 sm:p-8 text-accent/10 group-hover:text-accent/20 transition-colors hidden sm:block">
-              <ShieldCheck size={120} />
+            <div className="absolute top-0 right-0 p-8 text-accent/10 group-hover:text-accent/20 transition-colors hidden sm:block">
+              <ShieldCheck size={140} />
             </div>
             <div className="relative z-10">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center text-accent mb-4 sm:mb-6">
-                <BarChart3 size={24} />
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6">
+                <BarChart3 size={28} />
               </div>
-              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                Market Risk Validator
+              <h4 className="text-2xl sm:text-3xl font-bold mb-4 tracking-tight">
+                JemirUp: Local Data Driven Startup Validator
               </h4>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                An automated diagnostic tool designed to de-risk market entry. It synthesizes regulatory 
-                requirements and economic indicators to provide institutional go/no-go analysis.
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
+                An AI-based validation framework for early-stage ventures. 
+                It synthesizes hyper-local market data and sectoral benchmarks
+                to provide data-driven go/no-go analysis for local entrepreneurs.
               </p>
-              <div className="flex items-center text-accent font-bold text-sm sm:text-base cursor-default">
-                Internal Strategic Tool <span className="mx-2 text-muted-foreground/30">|</span> In-Development
-              </div>
+              <Link
+                href="https://www.jemirup.com"
+                target="_blank"
+                className="inline-flex items-center text-accent font-bold hover:underline text-base group"
+              >
+                Validate Startup Ideas{" "}
+                <ChevronRight
+                  size={18}
+                  className="ml-1 group-hover:translate-x-1 transition-transform"
+                />
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* 3. Research Projects & Articles Section */}
-      <section className="container mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
+      <section className="container mx-auto px-6">
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 space-y-4 md:space-y-0"
+        >
           <div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Research Projects & Articles
+            <span className="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">
+              Published Research
+            </span>
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tighter">
+              Insights & Analysis
             </h3>
           </div>
           <Link
             href="/projects"
-            className="inline-flex items-center text-primary font-bold hover:underline text-sm sm:text-base group"
+            className="inline-flex items-center text-primary font-bold hover:underline text-base group tracking-tight"
           >
-            See all research{" "}
+            View all publications{" "}
             <ArrowRight
-              size={16}
+              size={18}
               className="ml-1 group-hover:translate-x-1 transition-transform"
             />
           </Link>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {[
             {
               title: "Price Shocks & Food Security",
-              desc: "The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia.",
-              tags: ["Price Analytics", "Food Security", "Inflation Shocks"],
+              desc: "Empirical analysis of food security dynamics in the face of short-term price volatility in Ethiopia.",
+              tags: ["Price Analytics", "Food Security", "Volatility modeling"],
               link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
             },
             {
               title: "Agri-Finance & Credit Access",
-              desc: "Poverty and Access to Credit in Rural Ethiopia: Empirical Evidence from Coffee-Growing Households.",
-              tags: ["Access to Finance", "Agri-Finance"],
+              desc: "Evaluating the nexus between institutional credit access and agricultural scaling in coffee-growing regions.",
+              tags: ["Capital Access", "Agri-Finance", "Market Risk"],
               link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf",
             },
           ].map((project, i) => (
             <motion.div
               key={i}
-              {...fadeInUp}
-              transition={{ delay: i * 0.1 }}
-              className="p-6 sm:p-8 bg-card border border-muted/10 rounded-2xl sm:rounded-3xl hover:border-primary/30 transition-all flex flex-col shadow-sm"
+              variants={fadeInUpVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{
+                ...((fadeInUpVariants.visible as TargetAndTransition)
+                  .transition || {}),
+                delay: i * 0.1,
+              }}
+              className="p-8 sm:p-10 bg-card border border-muted/10 rounded-3xl hover:border-primary/30 transition-all flex flex-col shadow-sm"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary mb-4 sm:mb-6">
-                <FileText size={24} />
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                <FileText size={28} />
               </div>
-              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
+              <h4 className="text-2xl sm:text-3xl font-bold mb-4 leading-tight tracking-tight">
                 {project.title}
               </h4>
-              <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed flex-grow">
                 {project.desc}
               </p>
-              <div className="flex items-center justify-between mt-auto pt-6 border-t border-muted/10">
+              <div className="flex items-center justify-between mt-auto pt-8 border-t border-muted/10">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] font-mono px-2 py-1 bg-muted/10 rounded text-muted-foreground uppercase"
+                      className="text-[10px] font-mono px-3 py-1 bg-muted/10 rounded-full text-muted-foreground uppercase tracking-wider"
                     >
                       {tag}
                     </span>
@@ -205,29 +304,48 @@ export default function Home() {
                 <a
                   href={project.link}
                   target="_blank"
-                  className="text-primary hover:text-primary/80 transition-colors"
+                  className="text-primary hover:text-primary/80 transition-colors p-2 hover:bg-primary/5 rounded-full"
                 >
-                  <ExternalLink size={18} />
+                  <ExternalLink size={20} />
                 </a>
               </div>
             </motion.div>
           ))}
         </div>
       </section>
-
       {/* Final CTA */}
-      <div className="mt-10 md:mt-32 text-center">
-        <Link
-          href="/contact"
-          className="inline-flex items-center space-x-2 text-xl md:text-2xl font-bold hover:text-primary transition-colors group"
-        >
-          <span>Ready for a Strategic Partnership?</span>
-          <ArrowRight
-            size={24}
-            className="group-hover:translate-x-2 transition-transform"
-          />
-        </Link>
-      </div>
+      <motion.div
+        variants={fadeInUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="container mx-auto px-6"
+      >
+        <div className="bg-card border border-muted/10 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.02)_0%,transparent_100%)]" />
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
+              Let’s explore how we can{" "}
+              <span className="text-primary">work together</span>.
+            </h3>
+            <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+              I’m always open to discussing new challenges and seeing how my
+              background in economics and data systems can support your goals.
+              Feel free to reach out for a conversation.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-3 px-10 py-5 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 relative group"
+            >
+              <span className="relative">Get in Touch</span>
+              <ArrowRight
+                size={22}
+                className="relative group-hover:translate-x-1 transition-transform"
+              />
+            </Link>
+          </div>
+        </div>
+      </motion.div>{" "}
     </div>
   );
 }

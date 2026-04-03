@@ -83,10 +83,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </main>
           
-          <footer className="py-12 border-t border-muted/10 bg-card/50">
+          <footer className="py-4 border-t border-muted/10 bg-card/50">
             <div className="container mx-auto px-6 text-center text-muted-foreground text-sm">
               <p>&copy; {new Date().getFullYear()} Getachew Abegaz. All rights reserved.</p>
-              <p className="mt-2 text-muted-foreground/60">Strategic Architecture & Economic Strategy</p>
             </div>
           </footer>
         </div>

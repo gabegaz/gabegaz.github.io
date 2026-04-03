@@ -22,18 +22,16 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-muted/10 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2 group">
-          <div className="w-6 h-6 bg-primary rounded flex items-center justify-center font-bold text-md text-primary-foreground group-hover:scale-105 transition-transform">
-            G
-          </div>
-          <span className="text-md font-bold tracking-tight text-foreground hidden sm:inline-block">
-            GABEGAZ
+        <Link href="/" className="flex items-center space-x-3 group">
+          <span className="text-xs sm:text-sm font-light tracking-[0.2em] uppercase text-foreground">
+            Getachew <span className="hidden sm:inline">Abegaz</span>
           </span>
         </Link>
 
         <nav className="flex items-center space-x-1 sm:space-x-8">
           {navItems.map((item) => {
-            const isActive = pathname === item.path;
+            const isActive = pathname === item.path || pathname === `${item.path}/`;
+
             return (
               <Link
                 key={item.path}
@@ -54,7 +52,7 @@ export default function Navbar() {
               </Link>
             );
           })}
-          
+
         </nav>
       </div>
     </header>

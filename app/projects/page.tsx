@@ -4,24 +4,31 @@ import { motion } from "framer-motion";
 import { 
   Github, 
   ExternalLink, 
-  Search, 
-  BookOpen, 
-  Briefcase, 
-  Cpu, 
-  ShieldAlert, 
-  BarChart3,
-  LucideIcon // Added this type for strict typing
+  Search,
 } from "lucide-react";
-import projects, { Project } from "../projects_data";
+import projects from "../projects_data";
 import { useState, useMemo } from "react";
 
-// Fixed Error 1: Replaced 'any' with 'LucideIcon'
-const categoryIcons: Record<string, LucideIcon> = {
-  "Market Intelligence & Capital Strategy": BarChart3,
-  "Digital Economy & Technology": Cpu,
-  "Macroeconomic Risk & Volatility Analysis": ShieldAlert,
-  "Specialized Sectoral Depth (Agriculture/Finance)": BookOpen,
-  "Technical Tools": Briefcase,
+// Refined animation variants
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { 
+    duration: 0.8,
+    ease: [0.16, 1, 0.3, 1] as const
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.1,
+    },
+  },
 };
 
 export default function ProjectsPage() {
@@ -35,132 +42,101 @@ export default function ProjectsPage() {
     );
   }, [searchTerm]);
 
-  const projectsByCategory = useMemo(() => {
-    const grouped: Record<string, Project[]> = {};
-    filteredProjects.forEach(project => {
-      if (!grouped[project.category]) {
-        grouped[project.category] = [];
-      }
-      grouped[project.category].push(project);
-    });
-    return grouped;
-  }, [filteredProjects]);
-
-  const categories = Object.keys(projectsByCategory);
-
   return (
-    <div className="pt-16 md:pt-24 pb-16 md:pb-24">
-      <div className="container mx-auto px-4 sm:px-6">
+    <div className="pt-24 md:pt-32 pb-24 md:pb-32">
+      <div className="container mx-auto px-6">
         <motion.div 
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-12 md:mb-20"
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-16 md:mb-24"
         >
-          <h2 className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest mb-2">Portfolio & Archive</h2>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight">
-            Research Articles & <span className="text-accent">Technical Tools</span>.
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter leading-tight text-foreground">
+            Research Articles & <span className="text-primary italic">Analytical Tools</span>.
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mb-10 leading-relaxed">
-            A collection of strategic and market intelligence, econometric modeling, and technical articles.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-12 leading-relaxed tracking-tight font-normal">
+            A specialized collection of market intelligence, econometric modeling, and digital infrastructure strategies designed to de-risk growth in high-stakes environments.
           </p>
-          
+
           <div className="relative max-w-2xl">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
             <input 
               type="text" 
               placeholder="Search by topic, tag, or technology..."
-              className="w-full bg-card border border-muted/20 rounded-xl sm:rounded-2xl pl-11 pr-4 py-3 sm:py-4 focus:outline-none focus:border-primary transition-all text-sm sm:text-base shadow-sm"
+              className="w-full bg-card border border-muted/20 rounded-xl pl-12 pr-6 py-4 focus:outline-none focus:border-primary transition-all text-base shadow-sm backdrop-blur-sm"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
         </motion.div>
 
-        {categories.length > 0 ? (
-          <div className="space-y-16 md:space-y-24">
-            {/* Fixed Error 2: Removed unused 'catIndex' */}
-            {categories.map((category) => {
-              const Icon = categoryIcons[category] || BookOpen;
-              return (
-                <section key={category} className="space-y-8">
-                  <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="flex items-center space-x-4 border-b border-muted/10 pb-4"
-                  >
-                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                      <Icon size={24} />
-                    </div>
-                    <h2 className="text-xl md:text-2xl font-bold tracking-tight">{category}</h2>
-                  </motion.div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                    {projectsByCategory[category].map((project, index) => (
-                      <motion.div 
-                        key={project.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.05 }}
-                        className="group bg-card border border-muted/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:border-primary/30 transition-all flex flex-col h-full shadow-sm hover:shadow-md"
+        {filteredProjects.length > 0 ? (
+          <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+          >
+            {filteredProjects.map((project) => (
+              <motion.div 
+                key={project.title}
+                variants={fadeInUp}
+                className="group bg-card border border-muted/10 rounded-3xl p-8 sm:p-10 hover:border-primary/30 transition-all flex flex-col h-full shadow-sm hover:shadow-md relative overflow-hidden"
+              >
+                <div className="flex justify-between items-start mb-8">
+                  <div className="flex space-x-2">
+                    {project.code && (
+                      <a 
+                        href={project.code} 
+                        target="_blank" 
+                        className="p-3 bg-background border border-muted/10 rounded-xl hover:text-primary transition-colors shadow-sm"
+                        title="View Source Code"
                       >
-                        <div className="flex justify-between items-start mb-6">
-                          <div className="flex space-x-2">
-                            {project.code && (
-                              <a 
-                                href={project.code} 
-                                target="_blank" 
-                                className="p-2 bg-background border border-muted/10 rounded-lg hover:text-primary transition-colors"
-                                title="View Source Code"
-                              >
-                                <Github size={18} />
-                              </a>
-                            )}
-                          </div>
-                        </div>
-                        
-                        <h3 className="text-xl sm:text-2xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">
-                          {project.title}
-                        </h3>
-                        
-                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 flex-grow">
-                          {project.description}
-                        </p>
-                        
-                        <div className="flex flex-wrap gap-2 mb-8">
-                          {project.tags.map(tag => (
-                            <span key={tag} className="text-[10px] sm:text-xs px-3 py-1 bg-muted/10 rounded-full text-muted-foreground font-medium">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <div className="flex items-center justify-between pt-6 border-t border-muted/10">
-                          <a 
-                            href={project.link} 
-                            target="_blank"
-                            className="inline-flex items-center text-xs sm:text-sm font-bold text-foreground hover:text-primary transition-colors group/link"
-                          >
-                            {project.category === "Technical Tools & Prototypes" ? "View Project" : "Read Full Publication"} 
-                            <ExternalLink size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
-                          </a>
-                        </div>
-                      </motion.div>
-                    ))}
+                        <Github size={20} />
+                      </a>
+                    )}
                   </div>
-                </section>
-              );
-            })}
-          </div>
+                  <span className="text-[10px] font-mono text-muted-foreground/50 uppercase tracking-widest px-3 py-1 border border-muted/10 rounded-full">
+                    {project.category}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight tracking-tight">
+                  {project.title}
+                </h3>
+
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 flex-grow">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="text-[10px] px-3 py-1 bg-muted/10 rounded-full text-muted-foreground font-medium uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between pt-8 border-t border-muted/10">
+                  <a 
+                    href={project.link} 
+                    target="_blank"
+                    className="inline-flex items-center text-sm font-bold text-foreground hover:text-primary transition-colors group/link"
+                  >
+                    {project.category === "Technical Tools & Prototypes" ? "View Project" : "Read Full Publication"} 
+                    <ExternalLink size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         ) : (
-          <div className="text-center py-20 md:py-32">
-            <div className="inline-flex p-4 bg-muted/10 rounded-full mb-6 text-muted-foreground">
-              <Search size={32} />
+          <div className="text-center py-24 md:py-32">
+            <div className="inline-flex p-6 bg-muted/10 rounded-full mb-8 text-muted-foreground">
+              <Search size={48} />
             </div>
-            <h3 className="text-xl font-bold mb-2">No results found</h3>
-            {/* Fixed Error 3: Escaped quotes and apostrophes */}
-            <p className="text-muted-foreground max-w-sm mx-auto">
+            <h3 className="text-2xl font-bold mb-4 tracking-tight">No results found</h3>
+            <p className="text-muted-foreground text-lg max-w-sm mx-auto leading-relaxed">
               We couldn&apos;t find any projects or research matching &quot;{searchTerm}&quot;. Try a different search term.
             </p>
           </div>

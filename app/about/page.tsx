@@ -1,197 +1,198 @@
 "use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Linkedin, Mail, MessageSquare, ArrowRight, Award, BookOpen, GraduationCap, FileText, ExternalLink } from 'lucide-react';
-import expertise from './expertise';
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Linkedin,
+  Mail,
+  MessageSquare,
+  ArrowRight,
+  GraduationCap,
+} from "lucide-react";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+// Premium motion constants
+const baseTransition = {
+  duration: 0.8,
+  ease: [0.16, 1, 0.3, 1] as const,
+};
+
+const fadeInUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: baseTransition,
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
 };
 
 export default function AboutPage() {
   return (
-    <div className="pt-16 md:pt-24 pb-16 md:pb-24">
-      <div className="container mx-auto px-4 sm:px-6">
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Visual Sophistication: Subtle Mesh Glow & Grid Pattern */}
+      <div className="absolute inset-0 -z-10 bg-[#0a0a0a]">
+        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]" />
+        <div className="absolute top-0 right-0 w-[50vw] h-[50vh] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05)_0%,transparent_70%)]" />
+      </div>
+
+      <div className="container mx-auto px-6 pt-32 pb-24 md:pt-40 md:pb-32">
         {/* Profile Section */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-20 md:mb-32">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative lg:ml-0"
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-32 md:mb-48"
+        >
+          <motion.div
+            variants={fadeInUpVariants}
+            className="relative lg:w-fit shrink-0"
           >
-            <div className="w-32 h-[160px] md:w-48 md:h-[240px] rounded-3xl overflow-hidden relative z-10 shadow-2xl border-muted/10">
+            <div className="relative w-48 h-64 md:w-64 md:h-80 rounded-[2rem] overflow-hidden z-10 shadow-2xl">
               <Image
                 src="/04-removebg2.png"
                 alt="Getachew Abegaz"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover"
                 priority
               />
             </div>
-
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-0"></div>
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-0"></div>
+            {/* Decorative background elements for the image */}
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-0" />
+            <div className="absolute -top-8 -right-8 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl -z-0" />
           </motion.div>
 
-          <div className="flex-1 text-center lg:text-left">
-            <motion.div {...fadeInUp}>
+          <div className="flex-1 text-center lg:text-left max-w-4xl">            
 
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-               Hi! I am Getachew Ahmed Abegaz, a data strategist specializing in the intersection of Computer Science and Economic Analysis. With 20+ years of experience, I guide organizations, investors, and policymakers through the complexities of emerging markets.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
-                <div className="flex items-start space-x-3 text-left">
-                  <div className="mt-1 p-2 bg-primary/10 rounded-lg text-primary">
-                    <GraduationCap size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sm md:text-base">MSc Comp. Science</h4>
-                    <p className="text-xs md:text-sm text-muted-foreground">Technical Architecture</p>
-                  </div>
+            <motion.p 
+              variants={fadeInUpVariants}
+              className="text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed tracking-tight font-normal"
+            >
+              Hi! I am Getachew Ahmed Abegaz. I specialize in turning raw data into strategic value. With over 20 years of experience, I bridge the gap between fragmented information and measurable returns through high-level economic insights, the strategic valuation of information assets, and the architecture of custom analytical infrastructure for high-stakes decision environments.
+            </motion.p>
+
+            <motion.div 
+              variants={fadeInUpVariants}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="p-3 bg-primary/10 rounded-xl text-primary">
+                  <GraduationCap size={24} />
                 </div>
-                <div className="flex items-start space-x-3 text-left">
-                  <div className="mt-1 p-2 bg-accent/10 rounded-lg text-accent">
-                    <GraduationCap size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sm md:text-base">MSc Economics</h4>
-                    <p className="text-xs md:text-sm text-muted-foreground">Strategic Analysis</p>
-                  </div>
+                <div>
+                  <h4 className="font-bold text-lg tracking-tight">Economic Policy</h4>
+                  <p className="text-sm text-muted-foreground">Strategic Market Analysis</p>
                 </div>
               </div>
-              <div className="flex justify-center lg:justify-start space-x-4">
-                <a href="https://www.linkedin.com/in/gabegaz/" target="_blank" className="p-3 bg-card border border-muted/20 rounded-full hover:text-primary transition-colors">
-                  <Linkedin size={20} />
-                </a>
-                <a href="mailto:getabegaz@gmail.com" className="p-3 bg-card border border-muted/20 rounded-full hover:text-primary transition-colors">
-                  <Mail size={20} />
-                </a>
-                <a href="https://wa.me/251911480370" target="_blank" className="p-3 bg-card border border-muted/20 rounded-full hover:text-primary transition-colors">
-                  <MessageSquare size={20} />
-                </a>
+              <div className="flex items-start space-x-4">
+                <div className="p-3 bg-blue-500/10 rounded-xl text-blue-400">
+                  <GraduationCap size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg tracking-tight">Computer Science</h4>
+                  <p className="text-sm text-muted-foreground">Digital Infrastructure for Insights</p>
+                </div>
               </div>
             </motion.div>
-          </div>
-        </div>
 
-        {/* Deep Expertise Section */}
-        <section className="mb-20 md:mb-32">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 border-b border-muted/10 pb-6 md:pb-8">
-            <div>
-              <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Capabilities</h2>
-              <h3 className="text-3xl md:text-4xl font-bold">Deep Expertise</h3>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {expertise.map((item, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-6 md:p-8 bg-card border border-muted/10 rounded-2xl md:rounded-3xl hover:border-primary/20 transition-all"
+            <motion.div 
+              variants={fadeInUpVariants}
+              className="flex justify-center lg:justify-start space-x-6"
+            >
+              <a
+                href="https://www.linkedin.com/in/gabegaz/"
+                target="_blank"
+                className="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:text-primary hover:border-primary/50 transition-all"
               >
-                <div className="mb-4 md:mb-6 w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg md:rounded-xl flex items-center justify-center text-primary">
-                  {index === 0 ? <BookOpen size={24} /> : <Award size={24} />}
-                </div>
-                <h4 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{item.title}</h4>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
+                <Linkedin size={22} />
+              </a>
+              <a
+                href="mailto:getabegaz@gmail.com"
+                className="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:text-primary hover:border-primary/50 transition-all"
+              >
+                <Mail size={22} />
+              </a>
+              <a
+                href="https://wa.me/251911480370"
+                target="_blank"
+                className="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:text-primary hover:border-primary/50 transition-all"
+              >
+                <MessageSquare size={22} />
+              </a>
+            </motion.div>
           </div>
+        </motion.div>
+
+        {/* Research Bridge */}
+        <section className="mb-32 md:mb-48">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUpVariants}
+            className="bg-card border border-white/10 rounded-[3rem] p-12 md:p-20 relative overflow-hidden group"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.03)_0%,transparent_100%)]" />
+            <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+              <div className="max-w-2xl">
+                <p className="text-muted-foreground text-lg md:text-xl leading-relaxed tracking-tight">
+                  Explore my collection of market intelligence, econometric modeling, and digital infrastructure strategies designed to de-risk growth in high-stakes environments.
+                </p>
+              </div>
+              <Link
+                href="/projects"
+                className="inline-flex items-center space-x-3 px-10 py-5 bg-primary text-primary-foreground font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-primary/20 shrink-0"
+              >
+                <span>View Full Portfolio</span>
+                <ArrowRight size={22} />
+              </Link>
+            </div>
+          </motion.div>
         </section>
 
-
-{/* 3. Research Projects & Articles Section */}
-      <section className="container mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 space-y-4 md:space-y-0">
-          <div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Research Projects & Articles
-            </h3>
-          </div>
-          <Link
-            href="/projects"
-            className="inline-flex items-center text-primary font-bold hover:underline text-sm sm:text-base group"
-          >
-            See all research{" "}
-            <ArrowRight
-              size={16}
-              className="ml-1 group-hover:translate-x-1 transition-transform"
-            />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {[
-            {
-              title: "Price Shocks & Food Security",
-              desc: "The Short-term Impact of Price Shocks on Food Security—Evidence from Ethiopia.",
-              tags: ["Price Analytics", "Food Security", "Inflation Shocks"],
-              link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
-            },
-            {
-              title: "Agri-Finance & Credit Access",
-              desc: "Poverty and Access to Credit in Rural Ethiopia: Empirical Evidence from Coffee-Growing Households.",
-              tags: ["Access to Finance", "Agri-Finance"],
-              link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf",
-            },
-          ].map((project, i) => (
-            <motion.div
-              key={i}
-              {...fadeInUp}
-              transition={{ delay: i * 0.1 }}
-              className="p-6 sm:p-8 bg-card border border-muted/10 rounded-2xl sm:rounded-3xl hover:border-primary/30 transition-all flex flex-col shadow-sm"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary mb-4 sm:mb-6">
-                <FileText size={24} />
-              </div>
-              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
-                {project.title}
-              </h4>
-              <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
-                {project.desc}
-              </p>
-              <div className="flex items-center justify-between mt-auto pt-6 border-t border-muted/10">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] font-mono px-2 py-1 bg-muted/10 rounded text-muted-foreground uppercase"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="text-primary hover:text-primary/80 transition-colors"
-                >
-                  <ExternalLink size={18} />
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
         {/* Contact Bridge */}
-        <div className="mt-20 md:mt-32 text-center">
-          <Link href="/contact" className="inline-flex items-center space-x-2 text-xl md:text-2xl font-bold hover:text-primary transition-colors group">
-            <span>Ready for a Strategic Partnership?</span>
-            <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
-          </Link>
+{/* Final CTA */}
+      <motion.div
+        variants={fadeInUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="container mx-auto px-6"
+      >
+        <div className="bg-card border border-muted/10 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.02)_0%,transparent_100%)]" />
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
+              Let’s explore how we can <span className="text-primary">work together</span>.
+            </h3>
+            <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+              I’m always open to discussing new challenges and seeing how my 
+              background in economics and data systems can support your goals. 
+              Feel free to reach out for a conversation.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-3 px-10 py-5 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 relative group"
+            >
+              <span className="relative">Get in Touch</span>
+              <ArrowRight
+                size={22}
+                className="relative group-hover:translate-x-1 transition-transform"
+              />
+            </Link>
+          </div>
         </div>
-      </div>
+      </motion.div>      </div>
     </div>
   );
 }
-
-// Simple Link helper for this file
-import Link from 'next/link';

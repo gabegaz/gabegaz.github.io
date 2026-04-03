@@ -1,15 +1,15 @@
 const expertise = [
   {
-    title: 'Research & Policy Analysis',
-    description: 'Specializing in the modeling of agricultural productivity, price volatility... I synthesize complex data into actionable intelligence to inform policies.'
+    title: 'Information Asset Valuation',
+    description: 'Specializing in the strategic conversion of raw data into measurable returns. I architect frameworks that quantify the value of information assets, enabling leaders to treat data as a high-yield institutional resource rather than a static cost center.'
   },
   {
-    title: 'Data-Driven Project Execution',
-    description: 'Managing complex, multi-stakeholder initiatives at the intersection of tech and policy. I build automated analytics pipelines and decision-support systems that ensure high-quality, timely delivery of strategic objectives.'
+    title: 'Institutional Economic Intelligence',
+    description: 'Building high-fidelity digital twins of complex economies. I synthesize decades of macroeconomic indicators into institutional-grade analytical tools that provide strategic clarity for market entry and long-term capital allocation.'
   },
   {
-    title: 'Data and AI Strategy',
-    description: 'Designing and implementing AI and data-driven strategies to create competitive advantages. I leverage opensource and proprietory tools to build automated analytics pipelines, interactive dashboards, and decision-support tools that enhance operational efficiency.'
+    title: 'Strategic Risk Architecture',
+    description: 'Developing automated diagnostic frameworks to de-risk market entry. My approach integrates regulatory protocols, volatility benchmarks, and custom analytical infrastructure to transform complex risks into navigable strategic paths.'
   }
 ];
 

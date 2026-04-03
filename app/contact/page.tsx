@@ -71,10 +71,10 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12 md:mb-20"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight">
+            {/* <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight">
               Initiate a <span className="text-primary">Strategic</span> Consultation.
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            </h1> */}
+            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-muted-foreground max-w-3xl mx-auto">
               Let&apos;s discuss how we can operationalize your data and scale your business architecture.
             </p>
           </motion.div>
