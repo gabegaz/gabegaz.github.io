@@ -164,17 +164,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Organization</label>
-                  <input 
-                    type="text" 
-                    placeholder="Institutional or Corporate Entity"
-                    className="w-full bg-background border border-muted/20 rounded-lg md:rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
-                    value={formData.organization}
-                    onChange={(e) => setFormData({...formData, organization: e.target.value})}
-                  />
-                </div>
-
 
                 <div className="space-y-2">
                   <label className="text-[10px] md:text-xs font-mono text-muted-foreground uppercase tracking-wider">Message / Brief</label>
