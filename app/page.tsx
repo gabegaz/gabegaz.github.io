@@ -72,7 +72,7 @@ export default function Home() {
               variants={itemVariants}
               className="inline-block text-primary font-mono text-xs md:text-sm uppercase tracking-[0.3em] mb-6"
             >
-              Data/AI Strategy Advisor
+              Data, Tech and Policy Advisor
             </motion.span>
 
             <motion.h1
