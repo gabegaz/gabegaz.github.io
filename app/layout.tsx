@@ -7,7 +7,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: "Getachew Abegaz | Strategic Architecture & Economic Strategy",
+  title: "Getachew Abegaz | Advisor on Policy · Technology · Data Strategy",
   description: "Computer Scientist (MSc) & Economist (MSc) with 20+ years of experience bridging technical architecture and economic strategy to scale markets. Founder of Bitawd.",
   keywords: [
     'Getachew Abegaz',

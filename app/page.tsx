@@ -67,27 +67,23 @@ export default function Home() {
           className="container mx-auto"
         >
           <div className="max-w-6xl">
-            {/* Eyebrow Tag */}
-            <motion.div
-              variants={itemVariants}
-              className="inline-block px-3 py-1 bg-primary/5 border border-primary/10 rounded-full mb-8"
-            >
-              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-primary">
-                Policy · Technology · Data Strategy
-              </span>
-            </motion.div>
 
-            <motion.h1
-              variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-10 leading-[0.9] text-foreground"
-            >
-              Scaling Markets <br className="hidden lg:block" />
-              with{" "}
-              <span className="text-primary">
-                Data-Driven
-              </span>{" "}
-              Strategy
-            </motion.h1>
+
+            {/* Eyebrow Tag */}
+ <motion.h1
+   variants={itemVariants}
+   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-10 leading-[1.1] text-foreground"
+ >  Scaling Markets{" "}
+  <span className="hidden lg:inline-block w-4" />
+  <br className="hidden lg:block" />
+  with{" "}
+  <span className="text-primary">
+    Data-Driven
+  </span>{" "}
+  Strategy
+</motion.h1>
+
+
 
             <motion.p
               variants={itemVariants}
@@ -260,14 +256,14 @@ export default function Home() {
               desc: "Empirical analysis of food security dynamics in the face of short-term price volatility in Ethiopia.",
               tags: ["Price Analytics", "Food Security", "Volatility"],
               link: "https://link.springer.com/article/10.1007/s12571-015-0467-4",
-              color: "primary"
+              color: "primary",
             },
             {
               title: "Agri-Finance & Credit Access",
               desc: "Evaluating the nexus between institutional credit access and agricultural scaling in coffee-growing regions.",
               tags: ["Capital Access", "Agri-Finance", "Market Risk"],
               link: "https://eea-et.org/wp-content/uploads/2025/09/7TH_vol-II.pdf",
-              color: "secondary"
+              color: "secondary",
             },
           ].map((project, i) => (
             <motion.div
@@ -278,7 +274,9 @@ export default function Home() {
               viewport={{ once: true }}
               className="p-10 bg-white border border-muted rounded-[2rem] hover:shadow-xl transition-all flex flex-col group"
             >
-              <div className={`w-14 h-14 bg-${project.color}/10 rounded-2xl flex items-center justify-center text-${project.color} mb-8`}>
+              <div
+                className={`w-14 h-14 bg-${project.color}/10 rounded-2xl flex items-center justify-center text-${project.color} mb-8`}
+              >
                 <FileText size={32} />
               </div>
               <h4 className="text-3xl font-bold mb-4 leading-tight tracking-tight">
