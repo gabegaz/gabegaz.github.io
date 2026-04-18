@@ -67,23 +67,16 @@ export default function Home() {
           className="container mx-auto"
         >
           <div className="max-w-6xl">
-
-
             {/* Eyebrow Tag */}
- <motion.h1
-   variants={itemVariants}
-   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-10 leading-[1.1] text-foreground"
- >  Scaling Markets{" "}
-  <span className="hidden lg:inline-block w-4" />
-  <br className="hidden lg:block" />
-  with{" "}
-  <span className="text-primary">
-    Data-Driven
-  </span>{" "}
-  Strategy
-</motion.h1>
-
-
+            <motion.h1
+              variants={itemVariants}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-10 leading-[1.1] text-foreground"
+            >
+              {" "}
+              Scaling Markets <span className="hidden lg:inline-block w-4" />
+              <br className="hidden lg:block" />
+              with <span className="text-primary">Data-Driven</span> Strategy
+            </motion.h1>
 
             <motion.p
               variants={itemVariants}
