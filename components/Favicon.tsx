@@ -9,7 +9,7 @@ export function FaviconDesign({
     <div
       style={{
         fontSize: `${fontSize}px`,
-        background: '#3b82f6',
+        background: '#570af2',
         width: '100%',
         height: '100%',
         display: 'flex',

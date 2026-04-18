@@ -69,14 +69,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <GoogleAnalytics gaId="G-CBZ2TKHSNF" />
       </head>
       <body className={`${inter.variable} font-sans antialiased text-foreground bg-background`}>
         <div className="relative min-h-screen flex flex-col">
-          {/* Subtle background gradient for "Strategic" feel */}
-          <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-background to-background"></div>
+          {/* High-contrast background for DaisyUI Light feel */}
+          <div className="fixed inset-0 z-[-1] bg-white">
+            <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-[radial-gradient(circle_at_top_right,rgba(87,10,242,0.05)_0%,transparent_70%)]"></div>
+          </div>
           
           <Navbar />
           <main className="flex-grow">

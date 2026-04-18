@@ -3,17 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --card: #f9f9f9;
-  --card-foreground: #0a0a0a;
+  --background: 255 255 255;
+  --foreground: 31 41 55;
+  --card: 255 255 255;
+  --card-foreground: 31 41 55;
+  --primary: 87 10 242;
+  --primary-foreground: 255 255 255;
+  --secondary: 240 0 184;
+  --secondary-foreground: 255 255 255;
+  --accent: 55 205 190;
+  --accent-foreground: 31 41 55;
+  --muted: 242 242 242;
+  --muted-foreground: 75 85 99;
 }
 
+/* Updated dark mode for DaisyUI light context if needed, 
+   but keeping it distinct from the previous dark theme. */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --card: #121212;
-  --card-foreground: #ffffff;
+  --background: 31 41 55;
+  --foreground: 242 242 242;
+  --card: 45 52 65;
+  --card-foreground: 242 242 242;
+  --muted: 55 65 81;
+  --muted-foreground: 156 163 175;
 }
 
 @layer base {
@@ -33,7 +45,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-muted/20 rounded-full hover:bg-muted/40 transition-colors;
+  @apply bg-muted/40 rounded-full hover:bg-muted/60 transition-colors;
 }
 
 /* Typography Enhancements */

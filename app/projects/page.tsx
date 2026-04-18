@@ -81,7 +81,7 @@ export default function ProjectsPage() {
               <motion.div 
                 key={project.title}
                 variants={fadeInUp}
-                className="group bg-card border border-muted/10 rounded-3xl p-8 sm:p-10 hover:border-primary/30 transition-all flex flex-col h-full shadow-sm hover:shadow-md relative overflow-hidden"
+                className="group bg-white border border-muted rounded-3xl p-8 sm:p-10 hover:border-primary/30 transition-all flex flex-col h-full shadow-sm hover:shadow-md relative overflow-hidden"
               >
                 <div className="flex justify-between items-start mb-8">
                   <div className="flex space-x-2">
@@ -89,14 +89,14 @@ export default function ProjectsPage() {
                       <a 
                         href={project.code} 
                         target="_blank" 
-                        className="p-3 bg-background border border-muted/10 rounded-xl hover:text-primary transition-colors shadow-sm"
+                        className="p-3 bg-white border border-muted rounded-xl hover:text-primary transition-colors shadow-sm"
                         title="View Source Code"
                       >
                         <Github size={20} />
                       </a>
                     )}
                   </div>
-                  <span className="text-[10px] font-mono text-muted-foreground/50 uppercase tracking-widest px-3 py-1 border border-muted/10 rounded-full">
+                  <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest px-3 py-1 border border-muted rounded-full bg-muted/30">
                     {project.category}
                   </span>
                 </div>
@@ -111,13 +111,13 @@ export default function ProjectsPage() {
 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map(tag => (
-                    <span key={tag} className="text-[10px] px-3 py-1 bg-muted/10 rounded-full text-muted-foreground font-medium uppercase tracking-wider">
+                    <span key={tag} className="text-[10px] px-3 py-1 bg-muted rounded-full text-muted-foreground font-bold uppercase tracking-wider">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between pt-8 border-t border-muted/10">
+                <div className="flex items-center justify-between pt-8 border-t border-muted">
                   <a 
                     href={project.link} 
                     target="_blank"
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
           </motion.div>
         ) : (
           <div className="text-center py-24 md:py-32">
-            <div className="inline-flex p-6 bg-muted/10 rounded-full mb-8 text-muted-foreground">
+            <div className="inline-flex p-6 bg-muted rounded-full mb-8 text-muted-foreground">
               <Search size={48} />
             </div>
             <h3 className="text-2xl font-bold mb-4 tracking-tight">No results found</h3>
