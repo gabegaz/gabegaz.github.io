@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck,
   Globe2,
@@ -11,6 +12,7 @@ import {
   FileText,
   ExternalLink,
   BarChart3,
+  Youtube,
 } from "lucide-react";
 
 // Refined animation variants for premium consulting feel
@@ -117,6 +119,7 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
 
       {/* 2. Strategic Initiatives Section */}
       <section className="container mx-auto px-6">
@@ -300,6 +303,78 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      {/* 4. Digital Media Section */}
+      <section className="container mx-auto px-6">
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 space-y-4 md:space-y-0"
+        >
+          <div>
+            <span className="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">
+              Digital Media
+            </span>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+              Visual Intelligence
+            </h3>
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="group relative p-10 md:p-16 bg-slate-950 text-white rounded-[3rem] overflow-hidden transition-all shadow-2xl"
+        >
+          {/* Decorative background element */}
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.1)_0%,transparent_70%)] pointer-events-none" />
+          
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-12">
+            <div className="flex-1">
+              <div className="w-20 h-20 bg-red-600/20 rounded-[2rem] flex items-center justify-center text-red-500 mb-10 border border-red-500/20">
+                <Youtube size={48} strokeWidth={1.5} />
+              </div>
+              <h4 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                Chartmation: Data, Animated
+              </h4>
+              <p className="text-xl text-slate-400 mb-10 leading-relaxed font-medium max-w-2xl">
+                I translate complex economic, business, and market data into
+                high-impact animations. This channel bridges the gap between raw
+                datasets and intuitive understanding, empowering stakeholders to
+                make better-informed decisions through visual clarity.
+              </p>
+              <Link
+                href="https://www.youtube.com/@chartmation"
+                target="_blank"
+                className="inline-flex items-center px-8 py-4 bg-white text-slate-950 font-bold rounded-2xl hover:bg-slate-200 transition-all text-lg group"
+              >
+                Watch on YouTube{" "}
+                <ExternalLink
+                  size={20}
+                  className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                />
+              </Link>
+            </div>
+            
+            <div className="flex-1 hidden lg:block">
+              <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group-hover:border-red-500/30 transition-colors shadow-2xl shadow-red-500/10">
+                <Image
+                  src="/ChannelBanner_ManimCE_v0.20.1.png"
+                  alt="Chartmation Channel Banner"
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Final CTA */}
