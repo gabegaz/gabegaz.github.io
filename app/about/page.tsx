@@ -58,12 +58,12 @@ export default function AboutPage() {
             variants={fadeInUpVariants}
             className="relative lg:w-fit shrink-0"
           >
-            <div className="relative w-56 h-72 md:w-72 md:h-96 rounded-[2.5rem] overflow-hidden z-10 shadow-2xl shadow-primary/10 border-4 border-white">
+            <div className="relative w-56 h-72 md:w-72 md:h-96 rounded-[2.5rem] overflow-hidden z-10 bg-transparent">
               <Image
                 src="/04-removebg2.png"
                 alt="Getachew Abegaz"
                 fill
-                className="object-cover"
+                className="object-cover mix-blend-multiply"
                 priority
               />
             </div>
