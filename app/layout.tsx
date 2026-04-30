@@ -7,9 +7,11 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: "Getachew Abegaz | Advisor on Policy · Technology · Data Strategy",
-  description: "Computer Scientist (MSc) & Economist (MSc) with 20+ years of experience bridging technical architecture and economic strategy to scale markets. Founder of Bitawd.",
+  title: "Getachew Ahmed Abegaz | Advisor on Policy · Technology · Data Strategy",
+  description: "Getachew Ahmed Abegaz is a Computer Scientist (MSc) & Economist (MSc) with 20+ years of experience bridging technical architecture and economic strategy to scale markets. Founder of Bitawd.",
   keywords: [
+    'Getachew Ahmed Abegaz',
+    'Getachew Ahmed',
     'Getachew Abegaz',
     'Strategic Architecture',
     'Economic Strategy Ethiopia',
@@ -22,19 +24,19 @@ export const metadata: Metadata = {
     'Startup Validator AI',
     'Institutional Intelligence'
   ],
-  authors: [{ name: 'Getachew Abegaz', url: 'https://www.gabegaz.com' }],
-  creator: "Getachew Abegaz",
-  publisher: "Getachew Abegaz",
+  authors: [{ name: 'Getachew Ahmed Abegaz', url: 'https://www.gabegaz.com' }],
+  creator: "Getachew Ahmed Abegaz",
+  publisher: "Getachew Ahmed Abegaz",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Getachew Abegaz | Strategic Architecture & Economic Strategy",
+    title: "Getachew Ahmed Abegaz | Strategic Architecture & Economic Strategy",
     description: "Bridging technical architecture and economic strategy to scale markets in Ethiopia and beyond. Founder of Bitawd.",
     url: "https://www.gabegaz.com",
-    siteName: "Getachew Abegaz",
+    siteName: "Getachew Ahmed Abegaz",
     locale: "en_US",
     type: "website",
     images: [
@@ -42,13 +44,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Getachew Abegaz - Strategic Architecture & Economic Strategy",
+        alt: "Getachew Ahmed Abegaz - Strategic Architecture & Economic Strategy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Getachew Abegaz | Strategic Architecture & Economic Strategy",
+    title: "Getachew Ahmed Abegaz | Strategic Architecture & Economic Strategy",
     description: "Bridging technical architecture and economic strategy to scale markets. Founder of Bitawd.",
     images: ["/og-image.png"],
     creator: "@gabegaz",
@@ -68,10 +70,33 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Getachew Ahmed Abegaz",
+    "alternateName": ["Getachew Ahmed", "Getachew Abegaz"],
+    "url": "https://www.gabegaz.com",
+    "image": "https://www.gabegaz.com/og-image.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/gabegaz/",
+      "https://twitter.com/gabegaz"
+    ],
+    "jobTitle": "Advisor on Policy · Technology · Data Strategy",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Bitawd"
+    },
+    "description": "Computer Scientist (MSc) & Economist (MSc) with 20+ years of experience bridging technical architecture and economic strategy to scale markets."
+  };
+
   return (
     <html lang="en">
       <head>
         <GoogleAnalytics gaId="G-CBZ2TKHSNF" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={`${inter.variable} font-sans antialiased text-foreground bg-background`}>
         <div className="relative min-h-screen flex flex-col">
@@ -87,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           
           <footer className="py-4 border-t border-muted/10 bg-card/50">
             <div className="container mx-auto px-6 text-center text-muted-foreground text-sm">
-              <p>&copy; {new Date().getFullYear()} Getachew Abegaz. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Getachew Ahmed Abegaz. All rights reserved.</p>
             </div>
           </footer>
         </div>

@@ -61,7 +61,7 @@ export default function AboutPage() {
             <div className="relative w-56 h-72 md:w-72 md:h-96 rounded-[2.5rem] overflow-hidden z-10 bg-transparent">
               <Image
                 src="/04-removebg2.png"
-                alt="Getachew Abegaz"
+                alt="Getachew Ahmed Abegaz"
                 fill
                 className="object-cover mix-blend-multiply"
                 priority
@@ -75,9 +75,9 @@ export default function AboutPage() {
           <div className="flex-1 text-center lg:text-left max-w-4xl">            
             <motion.h2 
               variants={fadeInUpVariants}
-              className="text-4xl md:text-6xl font-bold tracking-tighter mb-8"
+              className="text-2xl md:text-4xl font-bold tracking-tighter mb-8"
             >
-              Getachew <span className="text-primary italic">Abegaz</span>
+              Getachew Ahmed <span className="text-primary italic">Abegaz</span>
             </motion.h2>
 
             <motion.p 

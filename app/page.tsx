@@ -69,7 +69,17 @@ export default function Home() {
           className="container mx-auto"
         >
           <div className="max-w-6xl">
-            {/* Eyebrow Tag */}
+            {/* Eyebrow Tag for SEO and Context */}
+            <motion.div
+              variants={itemVariants}
+              className="mb-6"
+            >
+              <span className="text-primary font-bold text-sm uppercase tracking-[0.3em]">
+                Getachew Ahmed Abegaz
+              </span>
+            </motion.div>
+
+            {/* Main Headline */}
             <motion.h1
               variants={itemVariants}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-10 leading-[1.1] text-foreground"
@@ -365,7 +375,7 @@ export default function Home() {
               <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 group-hover:border-red-500/30 transition-colors shadow-2xl shadow-red-500/10">
                 <Image
                   src="/ChannelBanner_ManimCE_v0.20.1.png"
-                  alt="Chartmation Channel Banner"
+                  alt="Chartmation Channel by Getachew Ahmed Abegaz - Data Animation"
                   fill
                   className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                 />

@@ -22,7 +22,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-muted/10 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3 group">
+        <Link 
+          href="/" 
+          className="flex items-center space-x-3 group"
+          aria-label="Getachew Ahmed Abegaz - Home"
+          title="Getachew Ahmed Abegaz"
+        >
           <span className="text-xs sm:text-sm font-light tracking-[0.2em] uppercase text-foreground">
             Getachew <span className="hidden sm:inline">Abegaz</span>
           </span>
