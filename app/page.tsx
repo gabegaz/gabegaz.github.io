@@ -349,7 +349,7 @@ export default function Home() {
                 make better-informed decisions through visual clarity.
               </p>
               <Link
-                href="https://www.youtube.com/@chartmation"
+                href=""
                 target="_blank"
                 className="inline-flex items-center px-8 py-4 bg-white text-slate-950 font-bold rounded-2xl hover:bg-slate-200 transition-all text-lg group"
               >
